@@ -28,6 +28,7 @@
             <string>image_speed=0
 status=0
 image_index=0
+bb_stat=0
 </string>
           </argument>
         </arguments>
@@ -50,8 +51,8 @@ image_index=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (status&lt;0) status=0
-else if (status&gt;10) status=10
+            <string>if (status&lt;0) status=10
+else if (status&gt;10) status=0
 image_index=status
 
 </string>
@@ -78,12 +79,7 @@ image_index=status
             <kind>1</kind>
             <string>if (team==Trey.player_num)
 {
-i=0
-while (Trey.action_tablets[i]!=self)
-{
-i++
-}
-Trey.active=i
+Trey.active=snum
 }
 </string>
           </argument>

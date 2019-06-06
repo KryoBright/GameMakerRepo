@@ -25,15 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>action_tablets[36]=0
+            <string>c=4
+action_tablets[c*6]=0
+action_panels[6]=0
+last_used=-1
 player_num=1
 i=0
 while (i&lt;6)
 {
-instance_create(self.x,self.y+100*i,panelObj);
+action_panels[i]=instance_create(self.x,self.y+100*i,panelObj);
+action_panels[i].snum=i;
 i++
 };
-c=4
 i=0
 while (i&lt;6*c)
 {
@@ -41,6 +44,7 @@ tmp=instance_create(self.x+20+210/c*(i mod c), self.y+(80-200/c)/2+100*(i div c)
 tmp.image_xscale=2/c
 tmp.image_yscale=2/c
 tmp.team=1
+tmp.snum=i
 action_tablets[i]=tmp
 i++
 }

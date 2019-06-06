@@ -25,77 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>last_mem=-1
-bb_stat=0
-image_xscale=0.5
+            <string>image_xscale=0.5
 image_yscale=0.4
 image_speed=0
-charged=0
-snum=0
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>i=snum-2
-nullchrg=true
-if (i&lt;0)
-{
-    i=0
-    nullchrg=false
-}
-while (i&lt;snum)
-{
-    if (Trey.action_panels[i].bb_stat!=0)
-    {
-        nullchrg=false
-    }
-    i++
-}
-if (nullchrg)
-{
-    charged=1
-    image_index=1;
-}
-else
-{
-    charged=0
-    image_index=0;
-}
-if (charged==1)
-{
-    if ((Trey.action_tablets[snum*4].status==4)or(Trey.action_tablets[snum*4].status==3))
-    {
-        if (Trey.action_tablets[snum*4+1].status==8)
-        {
-            if (Trey.action_tablets[snum*4+2].status==9)
-            {
-                if (Trey.action_tablets[snum*4+3].status==10)
-                {
-                    bb_stat=Trey.action_tablets[snum*4].status-1
-                }
-            }
-        }
-    }
-    else bb_stat=0
-}
 </string>
           </argument>
         </arguments>
