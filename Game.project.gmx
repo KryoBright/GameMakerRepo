@@ -9,6 +9,9 @@
     <sprite>sprites\Panel</sprite>
     <sprite>sprites\Tablet</sprite>
     <sprite>sprites\Caret</sprite>
+    <sprite>sprites\sprite3</sprite>
+    <sprite>sprites\sprite4</sprite>
+    <sprite>sprites\sprite5</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -18,6 +21,9 @@
     <object>objects\panelObj</object>
     <object>objects\tabletObj</object>
     <object>objects\caretObj</object>
+    <object>objects\Projectile</object>
+    <object>objects\Player_1</object>
+    <object>objects\Player_2</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
