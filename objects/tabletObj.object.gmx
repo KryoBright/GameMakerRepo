@@ -28,6 +28,7 @@
             <string>image_speed=0
 status=0
 image_index=0
+bb_stat=0
 </string>
           </argument>
         </arguments>
