@@ -12,6 +12,7 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <shaders name="shaders"/>
   <objects name="objects">
     <object>objects\Trey</object>
     <object>objects\Trey_player2</object>
