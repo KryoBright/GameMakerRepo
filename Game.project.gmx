@@ -22,6 +22,9 @@
     <object>objects\StartButton</object>
     <object>objects\PvPButton</object>
     <object>objects\PvEButton</object>
+    <object>objects\SettingsButton</object>
+    <object>objects\ExitButton</object>
+    <object>objects\BackToMMenuButton</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>
