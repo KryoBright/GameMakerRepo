@@ -77,7 +77,7 @@ image_index=status
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (team==Trey.player_num)
+            <string>if ((team==Trey.player_num)and(!Trey.ready))
 {
 Trey.active=snum
 }
