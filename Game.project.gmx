@@ -33,8 +33,8 @@
     <object>objects\Projectile</object>
     <object>objects\Player_1</object>
     <object>objects\Player_2</object>
-    <object>objects\ProjectileGrav</object>
     <object>objects\Start</object>
+    <object>objects\PlayerHealth</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>

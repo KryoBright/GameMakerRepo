@@ -89,7 +89,7 @@ if (charged==1)
             {
                 if (Trey.action_tablets[snum*4+3].status==10)
                 {
-                    bb_stat=Trey.action_tablets[snum*4].status-1
+                    bb_stat=Trey.action_tablets[snum*4].status-2
                 }
             }
         }

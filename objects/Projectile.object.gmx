@@ -30,6 +30,8 @@ p_speed=8
 hitstun=0
 set_collision=true
 set_player=1
+v_speed=2
+grav=false
 </string>
           </argument>
         </arguments>
@@ -53,6 +55,11 @@ set_player=1
           <argument>
             <kind>1</kind>
             <string>self.x=x+p_speed*set_player
+if (grav)
+{
+v_speed-=1/18
+y=y-v_speed
+}
 </string>
           </argument>
         </arguments>
