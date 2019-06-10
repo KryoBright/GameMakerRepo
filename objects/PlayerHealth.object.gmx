@@ -25,9 +25,32 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_healthbar(self.x,self.y,self.x+500,self.y+40,100*Trey.plr.prev_hp/100,c_black,c_yellow,c_yellow,abs(Trey.plr.team-1)div 2,true,true)
-draw_healthbar(self.x,self.y,self.x+500,self.y+40,100*Trey.plr.hp/100,c_red,c_green,c_lime,abs(Trey.plr.team-1)div 2,false,true)
-draw_text(self.x,self.y+60,string(Trey.plr.debuff)+string(Trey.plr.debuff))
+            <string>draw_healthbar(self.x,self.y,self.x+500,self.y+20,100*Trey.plr.prev_hp/100,c_black,c_yellow,c_yellow,abs(Trey.plr.team-1)div 2,true,true)
+draw_healthbar(self.x,self.y,self.x+500,self.y+20,100*Trey.plr.hp/100,c_red,c_green,c_lime,abs(Trey.plr.team-1)div 2,false,true)
+i=0
+n=0
+while (i&lt;10)
+{
+    if(Trey.plr.debuff[i]!=0)
+    {
+        draw_sprite(debuffs,i,self.x+5+n*25,self.y+22)
+        n++
+    }
+    i++
+}
+i=0
+
+while (i&lt;10)
+{
+    if(Trey.plr.buff[i]!=0)
+    {
+        draw_sprite(Buffs,i,self.x+5+n*25,self.y+22)
+        n++
+    }
+    i++
+}
+
+
 </string>
           </argument>
         </arguments>

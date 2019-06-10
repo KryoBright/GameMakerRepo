@@ -87,7 +87,29 @@ if (image_index==0)
 }
 if (debuff[2]!=0)
 {
-    hp-=0.1
+    hp-=0.01
+}
+if (buff[0]!=0)
+{
+    atcstun-=1/30  
+}
+if (buff[1]!=0)
+{
+    buff[1]=0    
+    i=0
+    while (i&lt;10)
+    {
+        if (debuff[i]&gt;0)
+        {
+            debuff[i]=0
+        }
+        i++
+    } 
+}
+if ((buff[2]!=0)and(hp==0))
+{
+    buff[2]=0
+    hp=60
 }
 i=0
 while (i&lt;10)
