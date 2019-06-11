@@ -25,23 +25,44 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>i=0
+            <string>cur=0
 c=4
+action_tablets[c*6]=0
+action_panels[6]=0
+last_used=-1
+player_num=1
+modif=0
+team=1
+
+i=0
 while (i&lt;6)
 {
-tmp=instance_create(1366-self.x,self.y+100*i,panelObj);
-tmp.image_xscale=-tmp.image_xscale
-f=0
-while (f&lt;c)
-{
-tmp2=instance_create(tmp.x+600*tmp.image_xscale+70+210/c*(f mod c),tmp.y+(80-200/c)/2,tabletObj)
-tmp2.image_xscale=2/c
-tmp2.image_yscale=2/c
-tmp2.team=2
-f++
-}
+action_panels[i]=instance_create(1366-self.x,self.y+100*i,panelObj);
+action_panels[i].snum=i;
+action_panels[i].image_xscale=-action_panels[i].image_xscale
 i++
 };
+i=0
+while (i&lt;6*c)
+{
+tmp=instance_create(action_panels[0].x-235+230/c*(i mod c),action_panels[0].y+(84-200/c)/2+100*(i div c),tabletObj)
+tmp.image_xscale=2/c
+tmp.image_yscale=2/c
+tmp.team=1
+tmp.snum=i
+tmp.tr=self
+action_tablets[i]=tmp
+i++
+}
+car=instance_create(action_tablets[0].x,action_tablets[0].y-ceil(74/c),caretObj)
+car.image_xscale=2/c
+car.image_yscale=2/c
+car.team=1
+car.tr=self
+plr=instance_create(1366-(self.x+350),self.y+200,Player_1)
+plr.image_xscale=-plr.image_xscale
+plr.team=-1
+active=0
 </string>
           </argument>
         </arguments>
@@ -63,6 +84,142 @@ i++
           <argument>
             <kind>4</kind>
             <string>2</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(action_panels[cur div 4].bb_stat==0))
+{
+    act=action_tablets[cur]
+    if (plr.debuff[3]&gt;0)
+    {
+        act.status=floor(random(11))        
+    }
+    if (plr.debuff[4]&gt;0)
+    {
+        act.status=0        
+    }
+    active=cur
+    if ((act.status&gt;0)and(act.status&lt;7))
+    {
+        modif=act.status
+    }
+    if (act.status==7)
+    {
+        //set player sprite to blocking
+        plr.block_delay=1
+        plr.atcstun=1
+    }
+    if (act.status&gt;7)
+    {
+        if (modif&lt;5)
+        {
+        plr.image_index=1
+        plr.anim=1
+        tmp=instance_create(plr.x-165,plr.y+40,Projectile)
+        tmp.set_player=-1
+        if (modif==1)
+        {
+            tmp.y+=20
+        }
+        if (modif==2)
+        {
+            tmp.y-=20
+        }
+        if (modif==3)
+        {
+            tmp.p_speed*=0.8
+            plr.atcstun-=0.2
+        }  
+        if (modif==4)
+        {
+            tmp.p_speed*=1.25
+            plr.atcstun+=0.2
+        }
+        plr.atcstun+=(act.status-7)*1/4
+        tmp.damage*=(act.status-7)*1/2-ceil(plr.debuff[0])*1/3
+        tmp.grav=true
+        //set projectile sprite here
+        modif=0
+        }
+        else
+        {
+            if (modif==5)
+            {
+                //switch,depending on character
+                Trey.plr.debuff[0]=1
+                //enemy rad sprite
+                plr.atcstun+=1/2
+                modif=0
+            }
+            
+            if (modif==6)
+            {
+                //switch,depending on character
+                plr.debuff[1]=1
+                plr.buff[floor(random(11))]=1
+                //enemy rad sprite
+                plr.atcstun+=1/2
+                modif=0
+            }
+        }        
+    }
+    cur++
+}
+if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(action_panels[cur div 4].bb_stat==1))
+{
+    //switch,depending on character
+    //animation
+    Trey.plr.debuff[2]=999
+    plr.atcstun+=3/4
+    cur+=4
+    if (cur&gt;23)
+    {
+        cur=23  
+    }
+}
+if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(action_panels[cur div 4].bb_stat==2))
+{
+    //switch,depending on character
+    //animation
+    r=0
+    while (r&lt;3)
+    {
+        if (random(1)&gt;=0.5)
+        {
+            plr.buff[floor(random(11))]=2
+        }
+        else
+        {
+            plr.debuff[floor(random(11))]=2
+        }
+        r++
+    }
+    plr.atcstun+=3/4
+    cur+=4
+    if (cur&gt;23)
+    {
+        cur=23  
+    }
+}
+</string>
           </argument>
         </arguments>
       </action>

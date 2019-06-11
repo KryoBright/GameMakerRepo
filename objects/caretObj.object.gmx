@@ -29,6 +29,7 @@
 state=0
 combo_state=0
 combo_init=0
+tr=0
 </string>
           </argument>
         </arguments>
@@ -51,13 +52,13 @@ combo_init=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if ((x!=Trey.action_tablets[Trey.active].x)or(y!=Trey.action_tablets[Trey.active].y-ceil(74/Trey.c)))
+            <string>if ((x!=tr.action_tablets[tr.active].x)or(y!=tr.action_tablets[tr.active].y-ceil(74/tr.c)))
 {
-    dst=(abs(x-Trey.action_tablets[Trey.active].x)+abs(y-Trey.action_tablets[Trey.active].y+ceil(74/Trey.c)))/2
-    move_towards_point(Trey.action_tablets[Trey.active].x,Trey.action_tablets[Trey.active].y-ceil(74/Trey.c),0.5*dst)
+    dst=(abs(x-tr.action_tablets[tr.active].x)+abs(y-tr.action_tablets[tr.active].y+ceil(74/tr.c)))/2
+    move_towards_point(tr.action_tablets[tr.active].x,tr.action_tablets[tr.active].y-ceil(74/tr.c),0.5*dst)
 }
 
-if (Trey.ready==0)
+if ((miragecoordinator.game_state==tr.team)or(miragecoordinator.game_state=tr.team+2))
     {
     if ((keyboard_check(vk_down))and((state==0)or(combo_state!=0)))
     {
@@ -127,12 +128,12 @@ if (Trey.ready==0)
             state=5
             combo_state=0
         }
-        Trey.action_tablets[Trey.active].status=state;
+        tr.action_tablets[tr.active].status=state;
         state=0
         delay=1
-            if (Trey.active&lt;(Trey.c*6-1))
+            if (tr.active&lt;(tr.c*6-1))
             {
-                Trey.active++;
+                tr.active++;
             }
     }
     else
@@ -141,6 +142,15 @@ if (Trey.ready==0)
         delay-=0.125
     }
 }
+if ((miragecoordinator.game_state==tr.team)or(miragecoordinator.game_state=tr.team+2)or(miragecoordinator.game_state==4))
+    {
+        visible=true
+    }
+    else
+    {
+        visible=false
+    }
+
 
 </string>
           </argument>
@@ -164,14 +174,14 @@ if (Trey.ready==0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (Trey.ready==0)
+            <string>if ((miragecoordinator.game_state==tr.team)or(miragecoordinator.game_state=tr.team+2))
 {
-if (mouse_y&lt;(y+174/Trey.c))
+if (mouse_y&lt;(y+174/tr.c))
 {
-    Trey.action_tablets[Trey.active].status++;
+    tr.action_tablets[tr.active].status++;
 }
 else {
-Trey.action_tablets[Trey.active].status--;
+tr.action_tablets[tr.active].status--;
 }
 }
 </string>

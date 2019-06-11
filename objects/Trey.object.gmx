@@ -45,15 +45,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ready=0
-cur=0
+            <string>cur=0
 c=4
 action_tablets[c*6]=0
 action_panels[6]=0
 last_used=-1
 player_num=1
 modif=0
-
+team=0
 
 i=0
 while (i&lt;6)
@@ -68,14 +67,16 @@ while (i&lt;6*c)
 tmp=instance_create(self.x+20+230/c*(i mod c), self.y+(84-200/c)/2+100*(i div c),tabletObj)
 tmp.image_xscale=2/c
 tmp.image_yscale=2/c
-tmp.team=1
+tmp.team=0
 tmp.snum=i
+tmp.tr=self
 action_tablets[i]=tmp
 i++
 }
 car=instance_create(action_tablets[0].x,action_tablets[0].y-ceil(74/c),caretObj)
 car.image_xscale=2/c
 car.image_yscale=2/c
+car.tr=self
 plr=instance_create(self.x+350,self.y+200,Player_1)
 plr.team=1
 active=0
@@ -104,7 +105,7 @@ background_visible[0]=true
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if ((ready)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(action_panels[cur div 4].bb_stat==0))
+            <string>if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(action_panels[cur div 4].bb_stat==0))
 {
     act=action_tablets[cur]
     if (plr.debuff[3]&gt;0)
@@ -181,7 +182,7 @@ background_visible[0]=true
     }
     cur++
 }
-if ((ready)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(action_panels[cur div 4].bb_stat==1))
+if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(action_panels[cur div 4].bb_stat==1))
 {
     //switch,depending on character
     //animation
@@ -193,7 +194,7 @@ if ((ready)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(action_
         cur=23  
     }
 }
-if ((ready)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(action_panels[cur div 4].bb_stat==2))
+if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(action_panels[cur div 4].bb_stat==2))
 {
     //switch,depending on character
     //animation

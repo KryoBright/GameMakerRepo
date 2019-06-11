@@ -45,6 +45,8 @@ self.sprite_index=Marie
 image_xscale=0.25
 image_yscale=0.25
 image_speed=0
+tmp=instance_create(32,32,PlayerHealth)
+tmp.plr=self
 </string>
           </argument>
         </arguments>

@@ -29,6 +29,9 @@
 status=0
 image_index=0
 bb_stat=0
+team=0
+locked=false
+tr=0
 </string>
           </argument>
         </arguments>
@@ -51,9 +54,27 @@ bb_stat=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (status&lt;0) status=10
+            <string>if ((miragecoordinator.game_state!=1-team)and(miragecoordinator.game_state!=3-team))
+{
+if (status&lt;0) status=10
 else if (status&gt;10) status=0
 image_index=status
+}
+else 
+{
+    if (miragecoordinator.game_state!=(3-team))
+    {
+        image_index=11
+    }
+    else if (!locked)
+    {
+        if (random(1)&gt;0.2)
+        {
+            image_index=11
+        }
+        locked=true
+    }
+}
 
 </string>
           </argument>
@@ -77,9 +98,9 @@ image_index=status
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if ((team==Trey.player_num)and(!Trey.ready))
+            <string>if ((team==miragecoordinator.game_state)or(team==miragecoordinator.game_state-2))
 {
-Trey.active=snum
+tr.active=snum
 }
 </string>
           </argument>

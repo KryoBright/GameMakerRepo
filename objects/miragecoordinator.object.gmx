@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>plr=0
+            <string>game_state=0
+delay=0
 </string>
           </argument>
         </arguments>
@@ -48,9 +49,45 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (plr.team==-1)
+            <string>if ((game_state==2)or(game_state==3))
 {
-    x=1366-500-32
+    if (delay==0)
+    {
+        delay=10
+    }
+    delay-=1/60
+    if (delay==0)
+    {
+        game_state++
+    }
+}
+if ((game_state==5)or(game_state==6))
+{
+    if (delay==0)
+    {
+        delay=1
+    }
+    delay-=1/60
+    if (delay==0)
+    {
+        game_state++
+    }
+}
+if (game_state==7)
+{
+    room_goto(MainMenu)
+}
+if (game_state==5)
+{
+    if (Trey.plr.hp&gt;Trey_player2.plr.hp)
+    {
+        Trey_player2.plr.hp=0
+    }
+    
+    if (Trey.plr.hp&lt;Trey_player2.plr.hp)
+    {
+        Trey.plr.hp=0
+    }
 }
 </string>
           </argument>
@@ -74,32 +111,28 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_healthbar(self.x,self.y,self.x+500,self.y+20,100*plr.prev_hp/100,c_black,c_yellow,c_yellow,abs(plr.team-1)div 2,true,true)
-draw_healthbar(self.x,self.y,self.x+500,self.y+20,100*plr.hp/100,c_red,c_green,c_lime,abs(plr.team-1)div 2,false,true)
-i=0
-n=0
-while (i&lt;10)
+            <string>if (game_state==6)
 {
-    if(plr.debuff[i]!=0)
+    if (Trey.plr.hp==0)and(Trey_player2.plr.hp!=0)
     {
-        draw_sprite(debuffs,i,self.x+5+n*25,self.y+22)
-        n++
+        draw_sprite(VictoryScreen,2,x-400,y+200)
     }
-    i++
+    if (Trey.plr.hp!=0)and(Trey_player2.plr.hp==0)
+    {
+        draw_sprite(VictoryScreen,3,x-400,y+200)
+    }
+    if (Trey.plr.hp==Trey_player2.plr.hp)
+    {
+        draw_sprite(VictoryScreen,0,x-400,y+200)
+    }
 }
-i=0
-
-while (i&lt;10)
+if (game_state==5)
 {
-    if(plr.buff[i]!=0)
+    if (Trey.plr.hp!=0)and(Trey_player2.plr.hp!=0)
     {
-        draw_sprite(Buffs,i,self.x+5+n*25,self.y+22)
-        n++
+        draw_sprite(VictoryScreen,4,x-400,y+200)
     }
-    i++
 }
-
-
 </string>
           </argument>
         </arguments>

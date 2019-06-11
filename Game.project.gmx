@@ -17,6 +17,7 @@
     <sprite>sprites\ReadyButton</sprite>
     <sprite>sprites\Buffs</sprite>
     <sprite>sprites\debuffs</sprite>
+    <sprite>sprites\VictoryScreen</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -36,9 +37,9 @@
     <object>objects\BackToMMenuButton</object>
     <object>objects\Projectile</object>
     <object>objects\Player_1</object>
-    <object>objects\Player_2</object>
     <object>objects\Start</object>
     <object>objects\PlayerHealth</object>
+    <object>objects\miragecoordinator</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>

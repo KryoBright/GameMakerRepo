@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="6" enumb="4">
+    <event eventtype="6" enumb="7">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,8 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Trey.ready=1
-instance_destroy()
+            <string>if (miragecoordinator.game_state&lt;3)
+{
+    miragecoordinator.game_state++
+}
+else
+{
+    miragecoordinator.game_state++
+    instance_destroy()
+}
 </string>
           </argument>
         </arguments>
