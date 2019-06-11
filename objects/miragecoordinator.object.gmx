@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>game_state=0
 delay=0
+plr1_fin=false
+plr2_fin=false
 </string>
           </argument>
         </arguments>
@@ -88,6 +90,10 @@ if (game_state==5)
     {
         Trey.plr.hp=0
     }
+}
+if ((plr1_fin)and(plr2_fin))
+{
+    game_state++
 }
 </string>
           </argument>

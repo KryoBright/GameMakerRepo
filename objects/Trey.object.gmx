@@ -59,6 +59,7 @@ while (i&lt;6)
 {
 action_panels[i]=instance_create(self.x,self.y+100*i,panelObj);
 action_panels[i].snum=i;
+action_panels[i].tr=self;
 i++
 };
 i=0

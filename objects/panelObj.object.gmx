@@ -32,6 +32,7 @@ image_yscale=0.4
 image_speed=0
 charged=0
 snum=0
+tr=0
 </string>
           </argument>
         </arguments>
@@ -63,7 +64,7 @@ if (i&lt;0)
 }
 while (i&lt;snum)
 {
-    if (Trey.action_panels[i].bb_stat!=0)
+    if (tr.action_panels[i].bb_stat!=0)
     {
         nullchrg=false
     }
@@ -81,15 +82,15 @@ else
 }
 if (charged==1)
 {
-    if ((Trey.action_tablets[snum*4].status==4)or(Trey.action_tablets[snum*4].status==3))
+    if ((tr.action_tablets[snum*4].status==4)or(tr.action_tablets[snum*4].status==3))
     {
-        if (Trey.action_tablets[snum*4+1].status==8)
+        if (tr.action_tablets[snum*4+1].status==8)
         {
-            if (Trey.action_tablets[snum*4+2].status==9)
+            if (tr.action_tablets[snum*4+2].status==9)
             {
-                if (Trey.action_tablets[snum*4+3].status==10)
+                if (tr.action_tablets[snum*4+3].status==10)
                 {
-                    bb_stat=Trey.action_tablets[snum*4].status-2
+                    bb_stat=tr.action_tablets[snum*4].status-2
                 }
             }
         }

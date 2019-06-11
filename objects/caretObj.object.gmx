@@ -30,6 +30,7 @@ state=0
 combo_state=0
 combo_init=0
 tr=0
+image_speed=0
 </string>
           </argument>
         </arguments>
