@@ -13,10 +13,10 @@
     <sprite>sprites\sprite4</sprite>
     <sprite>sprites\sprite5</sprite>
     <sprite>sprites\sprite6</sprite>
+    <sprite>sprites\fall</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <shaders name="shaders"/>
   <objects name="objects">
     <object>objects\Trey</object>
     <object>objects\Trey_player2</object>
@@ -32,6 +32,7 @@
     <object>objects\Projectile</object>
     <object>objects\Player_1</object>
     <object>objects\Player_2</object>
+    <object>objects\task</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>
