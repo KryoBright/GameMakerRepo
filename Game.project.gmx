@@ -85,7 +85,7 @@
     <object>objects\panelObj</object>
     <object>objects\tabletObj</object>
     <object>objects\caretObj</object>
-    <object>objects\Projectile</object>
+    <object>objects\projectile</object>
     <object>objects\Player_1</object>
     <object>objects\Player_2</object>
   </objects>
