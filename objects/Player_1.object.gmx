@@ -142,7 +142,7 @@ while (i&lt;10)
     }
     i++
 }
-if (hp==0)
+if (hp&lt;=0)
 {
     miragecoordinator.plr1_fin=true
     miragecoordinator.plr2_fin=true

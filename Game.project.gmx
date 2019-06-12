@@ -9,17 +9,13 @@
     <sprite>sprites\Caret</sprite>
     <sprite>sprites\Panel</sprite>
     <sprite>sprites\Tablet</sprite>
-    <sprite>sprites\Caret</sprite>
     <sprite>sprites\ProjectileSprite</sprite>
-    <sprite>sprites\sprite4</sprite>
-    <sprite>sprites\sprite5</sprite>
-    <sprite>sprites\sprite6</sprite>
-    <sprite>sprites\Marie</sprite>
     <sprite>sprites\ReadyButton</sprite>
     <sprite>sprites\Buffs</sprite>
     <sprite>sprites\debuffs</sprite>
     <sprite>sprites\VictoryScreen</sprite>
     <sprites name="Players">
+      <sprite>sprites\Marie</sprite>
       <sprite>sprites\opponent</sprite>
       <sprite>sprites\opponent_fun</sprite>
       <sprite>sprites\player</sprite>
@@ -104,7 +100,6 @@
     <object>objects\ExitButton</object>
     <object>objects\BackToMMenuButton</object>
     <object>objects\Projectile</object>
-    <object>objects\projectile</object>
     <object>objects\Player_1</object>
     <object>objects\Start</object>
     <object>objects\PlayerHealth</object>

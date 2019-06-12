@@ -136,6 +136,7 @@ background_visible[0]=true
         plr.image_index=1
         plr.anim=1
         tmp=instance_create(plr.x+40,plr.y+40,Projectile)
+        tmp.own_plr=plr
         if (modif==1)
         {
             tmp.y+=20

@@ -136,6 +136,7 @@ active=0
         plr.image_index=1
         plr.anim=1
         tmp=instance_create(plr.x-165,plr.y+40,Projectile)
+        tmp.own_plr=plr
         tmp.set_player=-1
         if (modif==1)
         {
