@@ -29,6 +29,8 @@
 delay=0
 plr1_fin=false
 plr2_fin=false
+p1x=0
+p2x=0
 </string>
           </argument>
         </arguments>
@@ -67,9 +69,9 @@ if ((game_state==5)or(game_state==6))
 {
     if (delay==0)
     {
-        delay=1
+        delay=0.1+(0.4*game_state-5)
     }
-    delay-=1/60
+    delay-=1/30
     if (delay==0)
     {
         game_state++
@@ -91,7 +93,7 @@ if (game_state==5)
         Trey.plr.hp=0
     }
 }
-if ((plr1_fin)and(plr2_fin))
+if ((plr1_fin)and(plr2_fin)and(game_state==4))
 {
     game_state++
 }
@@ -119,11 +121,11 @@ if ((plr1_fin)and(plr2_fin))
             <kind>1</kind>
             <string>if (game_state==6)
 {
-    if (Trey.plr.hp==0)and(Trey_player2.plr.hp!=0)
+    if ((Trey.plr.hp&lt;=0)and(Trey_player2.plr.hp!=0))
     {
         draw_sprite(VictoryScreen,2,x-400,y+200)
     }
-    if (Trey.plr.hp!=0)and(Trey_player2.plr.hp==0)
+    if ((Trey.plr.hp!=0)and(Trey_player2.plr.hp&lt;=0))
     {
         draw_sprite(VictoryScreen,3,x-400,y+200)
     }
@@ -134,7 +136,7 @@ if ((plr1_fin)and(plr2_fin))
 }
 if (game_state==5)
 {
-    if (Trey.plr.hp!=0)and(Trey_player2.plr.hp!=0)
+    if (Trey.plr.hp&gt;0)and(Trey_player2.plr.hp&gt;0)
     {
         draw_sprite(VictoryScreen,4,x-400,y+200)
     }

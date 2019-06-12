@@ -63,6 +63,7 @@ action_panels[i].tr=self;
 i++
 };
 i=0
+miragecoordinator.p1x=self.x+20
 while (i&lt;6*c)
 {
 tmp=instance_create(self.x+20+230/c*(i mod c), self.y+(84-200/c)/2+100*(i div c),tabletObj)

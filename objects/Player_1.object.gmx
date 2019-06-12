@@ -29,10 +29,11 @@
 hp=100
 prev_hp=100
 block_delay=0
-hitstun=0
+hitstun=100000
 atcstun=0
 buff[10]=0
 debuff[10]=0
+onPlace=false
 i=0
 while (i&lt;10)
 {
@@ -69,7 +70,16 @@ tmp.plr=self
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (atcstun!=0)
+            <string>if ((miragecoordinator.game_state==4)and(!onPlace))
+{
+    x=x-team*abs(abs(1366/2-x)-1366/2)/1.15
+    y=y-(500-125)*0.1
+    image_xscale=0.3*abs(image_xscale)/image_xscale
+    image_yscale=0.3
+    onPlace=true
+    hitstun=0.3
+}
+if (atcstun!=0)
     atcstun-=1/60  
 if (hitstun!=0)
     hitstun-=1/60

@@ -30,7 +30,7 @@ p_speed=8
 hitstun=0
 set_collision=true
 set_player=1
-v_speed=2
+v_speed=3.5
 grav=false
 </string>
           </argument>

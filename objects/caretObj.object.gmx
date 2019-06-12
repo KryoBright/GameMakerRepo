@@ -55,8 +55,8 @@ image_speed=0
             <kind>1</kind>
             <string>if ((x!=tr.action_tablets[tr.active].x)or(y!=tr.action_tablets[tr.active].y-ceil(74/tr.c)))
 {
-    dst=(abs(x-tr.action_tablets[tr.active].x)+abs(y-tr.action_tablets[tr.active].y+ceil(74/tr.c)))/2
-    move_towards_point(tr.action_tablets[tr.active].x,tr.action_tablets[tr.active].y-ceil(74/tr.c),0.5*dst)
+    dst=(abs(x-tr.action_tablets[tr.active].x)+abs(y-tr.action_tablets[tr.active].y+ceil(74/tr.c)))/4
+    move_towards_point(tr.action_tablets[tr.active].x,tr.action_tablets[tr.active].y-ceil(74/tr.c*2*image_yscale),0.5*dst)
 }
 
 if ((miragecoordinator.game_state==tr.team)or(miragecoordinator.game_state=tr.team+2))
@@ -151,7 +151,11 @@ if ((miragecoordinator.game_state==tr.team)or(miragecoordinator.game_state=tr.te
     {
         visible=false
     }
-
+if (miragecoordinator.game_state==4)
+{
+    image_xscale=0.25
+    image_yscale=0.25
+}
 
 </string>
           </argument>

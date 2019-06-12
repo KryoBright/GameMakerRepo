@@ -29,6 +29,7 @@
 bb_stat=0
 image_xscale=0.5
 image_yscale=0.4
+onPlace=false
 image_speed=0
 charged=0
 snum=0
@@ -96,6 +97,13 @@ if (charged==1)
         }
     }
     else bb_stat=0
+}
+if ((miragecoordinator.game_state==4)and(!onPlace))
+{
+    y=768-(768-y)div 2
+    image_xscale=0.25*abs(image_xscale)/image_xscale
+    image_yscale=0.2
+    onPlace=true
 }
 </string>
           </argument>

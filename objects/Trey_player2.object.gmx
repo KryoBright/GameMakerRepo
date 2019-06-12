@@ -44,6 +44,7 @@ action_panels[i].tr=self;
 i++
 };
 i=0
+miragecoordinator.p2x=action_panels[0].x-235
 while (i&lt;6*c)
 {
 tmp=instance_create(action_panels[0].x-235+230/c*(i mod c),action_panels[0].y+(84-200/c)/2+100*(i div c),tabletObj)

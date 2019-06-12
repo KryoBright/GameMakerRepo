@@ -28,6 +28,7 @@
             <string>image_speed=0
 status=0
 image_index=0
+onPlace=false
 bb_stat=0
 team=0
 locked=false
@@ -74,6 +75,15 @@ else
         }
         locked=true
     }
+}
+
+if ((miragecoordinator.game_state==4)and(!onPlace))
+{
+    x=(x+tr.action_panels[0].x)/2
+    y=768-(768-y)div 2
+    image_xscale=0.25
+    image_yscale=0.25
+    onPlace=true
 }
 
 </string>
