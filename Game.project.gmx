@@ -13,10 +13,21 @@
     <sprite>sprites\sprite4</sprite>
     <sprite>sprites\sprite5</sprite>
     <sprite>sprites\sprite6</sprite>
+    <sprite>sprites\Back</sprite>
+    <sprite>sprites\Exit</sprite>
+    <sprite>sprites\MarieCSprite</sprite>
+    <sprite>sprites\DZSprite</sprite>
+    <sprite>sprites\ThanosSprite</sprite>
+    <sprite>sprites\ZileanSprite</sprite>
+    <sprite>sprites\CMSprite</sprite>
+    <sprite>sprites\BananaSprite</sprite>
+    <sprite>sprites\BillSprite</sprite>
+    <sprite>sprites\VladSprite</sprite>
+    <sprite>sprites\PFSprite</sprite>
+    <sprite>sprites\GameNameSprite</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <shaders name="shaders"/>
   <objects name="objects">
     <object>objects\Trey</object>
     <object>objects\Trey_player2</object>
@@ -32,6 +43,18 @@
     <object>objects\Projectile</object>
     <object>objects\Player_1</object>
     <object>objects\Player_2</object>
+    <object>objects\GameName</object>
+    <objects name="Characters">
+      <object>objects\MarieC</object>
+      <object>objects\DenisZ</object>
+      <object>objects\Thanos</object>
+      <object>objects\Zilean</object>
+      <object>objects\CM</object>
+      <object>objects\Banana</object>
+      <object>objects\Bill</object>
+      <object>objects\Vlad</object>
+      <object>objects\PF</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>
