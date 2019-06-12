@@ -30,6 +30,12 @@ p_speed=8
 hitstun=0
 set_collision=true
 set_player=1
+ray=false
+animation=false
+magic_skill=false
+delay=10
+alpha=0
+just_projectile=false
 v_speed=3.5
 grav=false
 </string>
@@ -60,12 +66,32 @@ if (grav)
 v_speed-=1/18
 y=y-v_speed
 }
+            <string>randomize()
+if(ray)
+self.image_xscale+=0.1
+if(magic_skill)
+{
+                self.x+=p_speed*cos(alpha)*set_player
+                self.y+=p_speed*sin(alpha)*set_player
+                delay-=1
+                if(delay&lt;=0)
+                {
+                   delay=10
+                   alpha=random(2.6)-1.3       
+                }
+                if(image_angle&lt;alpha*60)  
+                   image_angle+=3
+                   else
+                   image_angle-=3 
+}
+if(just_projectile)
+self.x+=p_speed*set_player
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="Projectile">
+    <event eventtype="4" ename="Player_2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -82,7 +108,40 @@ y=y-v_speed
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if((set_player!=other.set_player)and(set_collision))
+            <string>if(animation)
+{
+p_speed=0
+self.animation_speed=20
+}
+instance_destroy()
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="projectile">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(animation)
+{
+p_speed=0
+
+}
+if(set_player!=other.set_player)
 instance_destroy()
 </string>
           </argument>

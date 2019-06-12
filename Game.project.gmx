@@ -6,6 +6,7 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprite>sprites\Caret</sprite>
     <sprite>sprites\Panel</sprite>
     <sprite>sprites\Tablet</sprite>
     <sprite>sprites\Caret</sprite>
@@ -18,6 +19,73 @@
     <sprite>sprites\Buffs</sprite>
     <sprite>sprites\debuffs</sprite>
     <sprite>sprites\VictoryScreen</sprite>
+    <sprites name="Players">
+      <sprite>sprites\opponent</sprite>
+      <sprite>sprites\opponent_fun</sprite>
+      <sprite>sprites\player</sprite>
+    </sprites>
+    <sprites name="Projectiles">
+      <sprites name="Bill">
+        <sprite>sprites\energetic_ball</sprite>
+        <sprite>sprites\blue_lazer</sprite>
+      </sprites>
+      <sprites name="Chiester">
+        <sprite>sprites\golden_arrow</sprite>
+      </sprites>
+      <sprites name="Cristal Maiden">
+        <sprite>sprites\ice_ball</sprite>
+        <sprite>sprites\ice_pick</sprite>
+        <sprite>sprites\ice_storm</sprite>
+      </sprites>
+      <sprites name="Denis">
+        <sprite>sprites\electro</sprite>
+        <sprite>sprites\zero</sprite>
+        <sprite>sprites\one</sprite>
+        <sprite>sprites\little_projectile</sprite>
+        <sprite>sprites\Star</sprite>
+        <sprite>sprites\letter_N</sprite>
+        <sprite>sprites\letter_U</sprite>
+        <sprite>sprites\letter_L</sprite>
+      </sprites>
+      <sprites name="Fineas&amp;Ferb">
+        <sprite>sprites\sputnic</sprite>
+        <sprite>sprites\water_shoot</sprite>
+        <sprite>sprites\water_bomb</sprite>
+        <sprite>sprites\tennis_ball</sprite>
+      </sprites>
+      <sprites name="Other projectiles">
+        <sprite>sprites\FIre_meteor</sprite>
+        <sprite>sprites\Fireball</sprite>
+        <sprite>sprites\template_projectile</sprite>
+      </sprites>
+      <sprites name="Tanos">
+        <sprite>sprites\water_projectile</sprite>
+        <sprite>sprites\rock</sprite>
+        <sprite>sprites\tree</sprite>
+      </sprites>
+      <sprites name="Vlad">
+        <sprite>sprites\magic</sprite>
+        <sprite>sprites\ignite</sprite>
+        <sprite>sprites\ice_projectile</sprite>
+        <sprite>sprites\Vlad_rock</sprite>
+        <sprite>sprites\fire_rock</sprite>
+      </sprites>
+      <sprites name="Zilean">
+        <sprite>sprites\Time_magic</sprite>
+        <sprite>sprites\time_bomb</sprite>
+      </sprites>
+      <sprites name="Marie Curie">
+        <sprite>sprites\bottle</sprite>
+        <sprite>sprites\radium</sprite>
+      </sprites>
+      <sprites name="Banana">
+        <sprite>sprites\banana_peel</sprite>
+        <sprite>sprites\banana_shoot</sprite>
+        <sprite>sprites\bunch_of_babanas</sprite>
+        <sprite>sprites\banana_barrier</sprite>
+        <sprite>sprites\rocket</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -36,6 +104,7 @@
     <object>objects\ExitButton</object>
     <object>objects\BackToMMenuButton</object>
     <object>objects\Projectile</object>
+    <object>objects\projectile</object>
     <object>objects\Player_1</object>
     <object>objects\Start</object>
     <object>objects\PlayerHealth</object>
