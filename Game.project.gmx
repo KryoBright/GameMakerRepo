@@ -13,11 +13,26 @@
     <sprite>sprites\sprite4</sprite>
     <sprite>sprites\sprite5</sprite>
     <sprite>sprites\sprite6</sprite>
+<<<<<<< HEAD
     <sprite>sprites\Marie</sprite>
     <sprite>sprites\ReadyButton</sprite>
     <sprite>sprites\Buffs</sprite>
     <sprite>sprites\debuffs</sprite>
     <sprite>sprites\VictoryScreen</sprite>
+=======
+    <sprite>sprites\Back</sprite>
+    <sprite>sprites\Exit</sprite>
+    <sprite>sprites\MarieCSprite</sprite>
+    <sprite>sprites\DZSprite</sprite>
+    <sprite>sprites\ThanosSprite</sprite>
+    <sprite>sprites\ZileanSprite</sprite>
+    <sprite>sprites\CMSprite</sprite>
+    <sprite>sprites\BananaSprite</sprite>
+    <sprite>sprites\BillSprite</sprite>
+    <sprite>sprites\VladSprite</sprite>
+    <sprite>sprites\PFSprite</sprite>
+    <sprite>sprites\GameNameSprite</sprite>
+>>>>>>> UI
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -37,9 +52,25 @@
     <object>objects\BackToMMenuButton</object>
     <object>objects\Projectile</object>
     <object>objects\Player_1</object>
+<<<<<<< HEAD
     <object>objects\Start</object>
     <object>objects\PlayerHealth</object>
     <object>objects\miragecoordinator</object>
+=======
+    <object>objects\Player_2</object>
+    <object>objects\GameName</object>
+    <objects name="Characters">
+      <object>objects\MarieC</object>
+      <object>objects\DenisZ</object>
+      <object>objects\Thanos</object>
+      <object>objects\Zilean</object>
+      <object>objects\CM</object>
+      <object>objects\Banana</object>
+      <object>objects\Bill</object>
+      <object>objects\Vlad</object>
+      <object>objects\PF</object>
+    </objects>
+>>>>>>> UI
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>
