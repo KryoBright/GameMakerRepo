@@ -53,6 +53,7 @@ last_used=-1
 player_num=1
 modif=0
 team=0
+ama=0
 
 i=0
 while (i&lt;6)
@@ -60,6 +61,7 @@ while (i&lt;6)
 action_panels[i]=instance_create(self.x,self.y+100*i,panelObj);
 action_panels[i].snum=i;
 action_panels[i].tr=self;
+action_panels[i].team=0
 i++
 };
 i=0
@@ -85,6 +87,8 @@ active=0
 instance_create(683-32,y+400,Start)
 background_index[0]=background0
 background_visible[0]=true
+background_index[1]=background1
+background_visible[1]=true
 </string>
           </argument>
         </arguments>
@@ -107,7 +111,19 @@ background_visible[0]=true
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(action_panels[cur div 4].bb_stat==0))
+            <string>i=0
+ama=0
+while (i&lt;c*6)
+{
+    tmp=action_tablets[i].status
+    if (tmp&gt;6)
+    {
+        ama++
+    }
+    i++
+}
+
+if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(plr.block_delay&lt;=0)and(action_panels[cur div 4].bb_stat==0))
 {
     act=action_tablets[cur]
     if (plr.debuff[3]&gt;0)
@@ -126,8 +142,7 @@ background_visible[0]=true
     if (act.status==7)
     {
         //set player sprite to blocking
-        plr.block_delay=1
-        plr.atcstun=1
+        plr.block_delay=1.1
     }
     if (act.status&gt;7)
     {
@@ -149,11 +164,13 @@ background_visible[0]=true
         {
             tmp.p_speed*=0.8
             plr.atcstun-=0.2
+            tmp.hitstun*=0.8
         }  
         if (modif==4)
         {
             tmp.p_speed*=1.25
             plr.atcstun+=0.2
+            tmp.hitstun*=1.25
         }
         plr.atcstun+=(act.status-7)*1/4
         tmp.damage*=(act.status-7)*1/2-ceil(plr.debuff[0])*1/3
@@ -192,10 +209,6 @@ if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr
     Trey_player2.plr.debuff[2]=999
     plr.atcstun+=3/4
     cur+=4
-    if (cur&gt;23)
-    {
-        cur=23  
-    }
 }
 if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(action_panels[cur div 4].bb_stat==2))
 {
@@ -216,10 +229,18 @@ if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr
     }
     plr.atcstun+=3/4
     cur+=4
-    if (cur&gt;23)
+}
+if (cur&gt;23)
+{
+    if (team==0)
     {
-        cur=23  
+        miragecoordinator.plr1_fin=true
     }
+    else
+    {
+        miragecoordinator.plr2_fin=true
+    }
+    cur=24
 }
 </string>
           </argument>

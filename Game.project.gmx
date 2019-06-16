@@ -19,6 +19,15 @@
       <sprite>sprites\opponent</sprite>
       <sprite>sprites\opponent_fun</sprite>
       <sprite>sprites\player</sprite>
+      <sprites name="Chiester">
+        <sprite>sprites\Chiester_normal</sprite>
+        <sprite>sprites\Chiester410n45</sprite>
+      </sprites>
+      <sprites name="Bill">
+        <sprite>sprites\Bill_gun</sprite>
+        <sprite>sprites\Bill_rifle</sprite>
+        <sprite>sprites\Bill_MG</sprite>
+      </sprites>
     </sprites>
     <sprites name="Projectiles">
       <sprites name="Bill">
@@ -85,6 +94,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">

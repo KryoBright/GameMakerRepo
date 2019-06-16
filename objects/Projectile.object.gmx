@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>damage = 10
 p_speed=8
-hitstun=0
+hitstun=0.3
 set_collision=true
 set_player=1
 ray=false
@@ -65,7 +65,7 @@ own_plr=0
             <kind>1</kind>
             <string>if (grav)
 {
-v_speed-=1/18
+v_speed-=1/18*(p_speed/8)
 y=y-v_speed
 }
 randomize()
@@ -112,7 +112,23 @@ self.x+=p_speed*set_player
             <kind>1</kind>
             <string>if (other!=own_plr)
 {
+    if (other.block_delay!=0)
+    {
+        other.hp-=damage*0.2
+        if (other.hitstun==0)
+        {
+            other.prev_hp=other.hp
+        }
+    }
+    else
+    {
     other.hp-=damage
+    if (other.hitstun==0)
+    {
+        other.prev_hp=other.hp
+    }
+    other.hitstun=hitstun
+    }
     instance_destroy(self)
 }
 </string>

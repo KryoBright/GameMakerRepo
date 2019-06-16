@@ -29,6 +29,7 @@
 delay=0
 plr1_fin=false
 plr2_fin=false
+set=false
 p1x=0
 p2x=0
 </string>
@@ -65,9 +66,21 @@ p2x=0
         game_state++
     }
 }
+if ((game_state==4)and(!set))
+{
+    if (Trey.ama&gt;Trey_player2.ama)
+    {
+        Trey.plr.hp-=abs(Trey.ama-Trey_player2.ama)*4
+    }
+    else
+    {
+        Trey_player2.plr.hp-=abs(Trey.ama-Trey_player2.ama)*4
+    }
+    set=true
+}
 if ((game_state==5)or(game_state==6))
 {
-    if (delay==0)
+    if (delay&lt;=0)
     {
         delay=0.1+(0.4*game_state-5)
     }
@@ -81,7 +94,7 @@ if (game_state==7)
 {
     room_goto(MainMenu)
 }
-if (game_state==5)
+if ((game_state==5)and(delay&lt;0.05))
 {
     if (Trey.plr.hp&gt;Trey_player2.plr.hp)
     {
@@ -95,6 +108,8 @@ if (game_state==5)
 }
 if ((plr1_fin)and(plr2_fin)and(game_state==4))
 {
+    if (instance_find(Projectile,1)==noone)
+    if ((Trey.plr.hitstun+Trey.plr.atcstun+Trey.plr.block_delay+Trey_player2.plr.hitstun+Trey_player2.plr.atcstun+Trey_player2.plr.block_delay)&lt;=0)
     game_state++
 }
 </string>
@@ -139,6 +154,10 @@ if (game_state==5)
     if (Trey.plr.hp&gt;0)and(Trey_player2.plr.hp&gt;0)
     {
         draw_sprite(VictoryScreen,4,x-400,y+200)
+    }
+    else
+    {
+        game_state++
     }
 }
 </string>

@@ -41,6 +41,7 @@ action_panels[i]=instance_create(1366-self.x,self.y+100*i,panelObj);
 action_panels[i].snum=i;
 action_panels[i].image_xscale=-action_panels[i].image_xscale
 action_panels[i].tr=self;
+action_panels[i].team=1
 i++
 };
 i=0
@@ -107,7 +108,19 @@ active=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(action_panels[cur div 4].bb_stat==0))
+            <string>i=0
+ama=0
+while (i&lt;c*6)
+{
+    tmp=action_tablets[i].status
+    if (tmp&gt;6)
+    {
+        ama++
+    }
+    i++
+}
+
+if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(plr.block_delay&lt;=0)and(action_panels[cur div 4].bb_stat==0))
 {
     act=action_tablets[cur]
     if (plr.debuff[3]&gt;0)
@@ -126,8 +139,7 @@ active=0
     if (act.status==7)
     {
         //set player sprite to blocking
-        plr.block_delay=1
-        plr.atcstun=1
+        plr.block_delay=1.1
     }
     if (act.status&gt;7)
     {
@@ -193,10 +205,6 @@ if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr
     Trey.plr.debuff[2]=999
     plr.atcstun+=3/4
     cur+=4
-    if (cur&gt;23)
-    {
-        cur=23  
-    }
 }
 if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(action_panels[cur div 4].bb_stat==2))
 {
@@ -217,10 +225,19 @@ if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr
     }
     plr.atcstun+=3/4
     cur+=4
-    if (cur&gt;23)
+}
+
+if (cur&gt;23)
+{
+    if (team==0)
     {
-        cur=23  
+        miragecoordinator.plr1_fin=true
     }
+    else
+    {
+        miragecoordinator.plr2_fin=true
+    }
+    cur=24
 }
 </string>
           </argument>
