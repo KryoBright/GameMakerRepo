@@ -18,6 +18,7 @@
       <sprites name="Bill">
         <sprite>sprites\energetic_ball</sprite>
         <sprite>sprites\blue_lazer</sprite>
+        <sprite>sprites\bill_lazer</sprite>
       </sprites>
       <sprites name="Chiester">
         <sprite>sprites\golden_arrow</sprite>
@@ -76,6 +77,8 @@
         <sprite>sprites\rocket</sprite>
       </sprites>
     </sprites>
+    <sprite>sprites\sprite_portal</sprite>
+    <sprite>sprites\it</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -88,6 +91,9 @@
     <object>objects\projectile</object>
     <object>objects\Player_1</object>
     <object>objects\Player_2</object>
+    <object>objects\portal</object>
+    <object>objects\Ray</object>
+    <object>objects\obj_it</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

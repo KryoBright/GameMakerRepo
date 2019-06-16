@@ -7,19 +7,19 @@
   <coltolerance>0</coltolerance>
   <sepmasks>-1</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>15</bbox_left>
-  <bbox_right>134</bbox_right>
-  <bbox_top>43</bbox_top>
-  <bbox_bottom>94</bbox_bottom>
+  <bbox_left>25</bbox_left>
+  <bbox_right>52</bbox_right>
+  <bbox_top>80</bbox_top>
+  <bbox_bottom>1199</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>145</width>
-  <height>136</height>
+  <width>80</width>
+  <height>1280</height>
   <frames>
-    <frame index="0">images\blue_lazer_0.png</frame>
+    <frame index="0">images\it_0.png</frame>
   </frames>
 </sprite>

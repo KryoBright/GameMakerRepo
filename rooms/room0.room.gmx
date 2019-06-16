@@ -53,9 +53,12 @@
   <instances>
     <instance objName="Trey" x="32" y="160" name="inst_CE2EFA25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Trey_player2" x="32" y="160" name="inst_D6E9125D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="projectile" x="496" y="432" name="inst_79495E1C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Player_1" x="416" y="384" name="inst_4E82888E" locked="0" code="" scaleX="2.13333344459534" scaleY="2.40000009536743" colour="4294967295" rotation="0"/>
-    <instance objName="Player_2" x="864" y="352" name="inst_542406FC" locked="0" code="" scaleX="2.13333344459534" scaleY="2.40000009536743" colour="4294967295" rotation="0"/>
+    <instance objName="Player_1" x="320" y="384" name="inst_4E82888E" locked="0" code="" scaleX="2.13333344459534" scaleY="2.40000009536743" colour="4294967295" rotation="0"/>
+    <instance objName="Player_2" x="1008" y="368" name="inst_542406FC" locked="0" code="" scaleX="2.13333344459534" scaleY="2.40000009536743" colour="4294967295" rotation="0"/>
+    <instance objName="portal" x="480" y="400" name="inst_A2769324" locked="0" code="" scaleX="0.5" scaleY="0.400000005960464" colour="4294967295" rotation="0"/>
+    <instance objName="projectile" x="400" y="432" name="inst_8C41B844" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Ray" x="1088" y="432" name="inst_534128F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_it" x="704" y="-16" name="inst_5C8482E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
