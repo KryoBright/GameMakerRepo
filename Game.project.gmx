@@ -91,6 +91,24 @@
         <sprite>sprites\rocket</sprite>
       </sprites>
     </sprites>
+    <sprite>sprites\sprite3</sprite>
+    <sprite>sprites\sprite4</sprite>
+    <sprite>sprites\sprite5</sprite>
+    <sprite>sprites\sprite6</sprite>
+    <sprite>sprites\Back</sprite>
+    <sprite>sprites\Exit</sprite>
+    <sprite>sprites\MarieCSprite</sprite>
+    <sprite>sprites\DZSprite</sprite>
+    <sprite>sprites\ThanosSprite</sprite>
+    <sprite>sprites\ZileanSprite</sprite>
+    <sprite>sprites\CMSprite</sprite>
+    <sprite>sprites\BananaSprite</sprite>
+    <sprite>sprites\BillSprite</sprite>
+    <sprite>sprites\VladSprite</sprite>
+    <sprite>sprites\PFSprite</sprite>
+    <sprite>sprites\GameNameSprite</sprite>
+    <sprite>sprites\ChiesterSprite</sprite>
+    <sprite>sprites\CaretChar</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -114,6 +132,12 @@
     <object>objects\Start</object>
     <object>objects\PlayerHealth</object>
     <object>objects\miragecoordinator</object>
+    <object>objects\GameName</object>
+    <object>objects\CharObj</object>
+    <object>objects\PickChar</object>
+    <object>objects\ClickChar</object>
+    <object>objects\Chars</object>
+    <object>objects\RandomChar</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>
