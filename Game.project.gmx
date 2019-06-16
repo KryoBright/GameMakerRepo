@@ -24,9 +24,14 @@
     <sprite>sprites\BillSprite</sprite>
     <sprite>sprites\VladSprite</sprite>
     <sprite>sprites\PFSprite</sprite>
-    <sprite>sprites\GameNameSprite</sprite>
     <sprite>sprites\ChiesterSprite</sprite>
-    <sprite>sprites\CaretChar</sprite>
+    <sprite>sprites\GameNameSprite</sprite>
+    <sprite>sprites\CaretCharPlayer2</sprite>
+    <sprite>sprites\CaretCharPlayer1</sprite>
+    <sprite>sprites\RandomCharSprite</sprite>
+    <sprite>sprites\PickCharSprite</sprite>
+    <sprite>sprites\ConfirmChoiceSprite</sprite>
+    <sprite>sprites\ResetChoiceSprite</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -51,6 +56,7 @@
     <object>objects\ClickChar</object>
     <object>objects\Chars</object>
     <object>objects\RandomChar</object>
+    <object>objects\ConfirmButton</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>
