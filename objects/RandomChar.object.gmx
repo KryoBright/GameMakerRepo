@@ -51,15 +51,30 @@
             <string>i=irandom_range(0,9)
 if(Chars.player == 1)
 {
-tmp=instance_create(Chars.tmp[i].x,Chars.tmp[i].y,ClickChar);
-tmp.sprite_index=CaretCharPlayer1
-instance_create(960,640,PickChar)
+    instance_create(1088,640,PickChar)
+    PickChar.player1Char = i
+    p1=instance_create(1008,96,CharObj);
+    p1.sprite_index=Chars.char[i];
+    p1.image_xscale=0.7
+    p1.image_yscale=0.7
+    i = 0
+    Chars.player = 2
 }
-if(Chars.player == 2)
+else if(Chars.player == 2)
 {
-tmp=instance_create(Chars.tmp[i].x,Chars.tmp[i].y,ClickChar);
-tmp.sprite_index=CaretCharPlayer2
-instance_create(960,640,PickChar)
+    instance_create(1088,640,PickChar)
+    PickChar.player2Char = i
+    p2=instance_create(1008,352,CharObj);
+    p2.sprite_index=Chars.char[i];
+    p2.image_xscale=0.7
+    p2.image_yscale=0.7
+    tmp1 = PickChar
+    tmp1.y -=1000
+    tmp1 = RandomChar
+    tmp1.y -=1000
+    tmp1 = instance_create(896,640,ResetChoiceButton)
+    tmp1 = instance_create(1088,640,ConfirmChoiceButton)
+    Chars.player = 3
 }
 </string>
           </argument>

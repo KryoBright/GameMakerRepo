@@ -50,33 +50,40 @@ player2Char = -1
           <argument>
             <kind>1</kind>
             <string>i = 0
+a = 0
+b = 0
 if(instance_exists(ClickChar) and Chars.player == 1)
 {
-    while(Chars.tmp[i].x != ClickChar.x and Chars.tmp[i].y != ClickChar.y)
+    while(Chars.tmp[i].x != ClickChar.x || Chars.tmp[i].y != ClickChar.y)
     {
          i++
     }
     player1Char = i
-    /*p1=instance_create(,,CharObj);
+    p1=instance_create(1008,96,CharObj);
     p1.sprite_index=Chars.char[i];
     p1.image_xscale=0.7
-    p1.image_yscale=0.7*/
+    p1.image_yscale=0.7
     i = 0
     Chars.player = 2
 }
 else if(instance_exists(ClickChar) and Chars.player == 2)
 {
-    while(Chars.tmp[i].x != ClickChar.x and Chars.tmp[i].y != ClickChar.y)
+    while(Chars.tmp[i].x != ClickChar.x || Chars.tmp[i].y != ClickChar.y)
     {
          i++
     }
     player2Char = i
-    /*p2=instance_create(,,CharObj);
+    p2=instance_create(1008,352,CharObj);
     p2.sprite_index=Chars.char[i];
     p2.image_xscale=0.7
-    p2.image_yscale=0.7*/
-    tmp1 = instance_create(1088,640,ResetChoiceButton)
-    tmp1 = instance_create(1216,640,ConfirmChoiceButton)
+    p2.image_yscale=0.7
+    tmp1 = PickChar
+    tmp1.y -=1000
+    tmp1 = RandomChar
+    tmp1.y -=1000
+    tmp1 = instance_create(896,640,ResetChoiceButton)
+    tmp1 = instance_create(1088,640,ConfirmChoiceButton)
+    Chars.player = 3
 }
 </string>
           </argument>
