@@ -108,10 +108,9 @@
       <sprite>sprites\button_music_click</sprite>
       <sprite>sprites\button_sounds</sprite>
       <sprite>sprites\button_sounds_click</sprite>
+      <sprite>sprites\sprite82</sprite>
       <sprite>sprites\button_full</sprite>
-      <sprite>sprites\button_full_click</sprite>
       <sprite>sprites\button_window</sprite>
-      <sprite>sprites\button_window_click</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -148,8 +147,7 @@
       <object>objects\btn_back</object>
       <object>objects\btn_music</object>
       <object>objects\btn_sounds</object>
-      <object>objects\btn_full</object>
-      <object>objects\btn_window</object>
+      <object>objects\btn_fullandwindow</object>
     </objects>
   </objects>
   <rooms name="rooms">

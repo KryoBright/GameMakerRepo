@@ -54,8 +54,7 @@
     <instance objName="btn_back" x="1184" y="704" name="inst_F9BA2E1D" locked="0" code="" scaleX="0.800000011920929" scaleY="0.800000011920929" colour="4294967295" rotation="0"/>
     <instance objName="btn_music" x="672" y="160" name="inst_F2D4FBB5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="btn_sounds" x="680" y="352" name="inst_C863125B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="btn_full" x="400" y="512" name="inst_0428A493" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="btn_window" x="960" y="512" name="inst_A1D50D07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="btn_fullandwindow" x="680" y="544" name="inst_B4791E75" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
