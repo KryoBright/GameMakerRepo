@@ -20,6 +20,6 @@
   <width>75</width>
   <height>63</height>
   <frames>
-    <frame index="0">images\Vlad_rock_0.png</frame>
+    <frame index="0">images\vlad_rock_0.png</frame>
   </frames>
 </sprite>

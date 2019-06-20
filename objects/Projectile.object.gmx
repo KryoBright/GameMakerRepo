@@ -30,7 +30,6 @@ p_speed=8
 hitstun=0.3
 set_collision=true
 set_player=1
-ray=false
 animation=false
 magic_skill=false
 delay=10
@@ -52,6 +51,9 @@ while (i&lt;10)
     i++
 }
 chased=false
+ult_fineas_and_ferb=false
+tanos_projectile=false
+before_portal=false
 </string>
           </argument>
         </arguments>
@@ -97,6 +99,13 @@ if(magic_skill)
                    else
                    image_angle-=3 
 }
+if(ult_fineas_and_ferb)
+{
+    self.x+=p_speed*set_player
+    self.y+=(p_speed*set_player)/2
+}
+if(tanos_projectile)
+self.y-=p_speed
 if(just_projectile)
 self.x+=p_speed*set_player
 if (dvd)
