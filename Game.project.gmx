@@ -79,19 +79,32 @@
     </sprites>
     <sprite>sprites\sprite_portal</sprite>
     <sprite>sprites\it</sprite>
-    <sprite>sprites\button_exit</sprite>
-    <sprite>sprites\button_settings</sprite>
-    <sprite>sprites\button_creators</sprite>
-    <sprite>sprites\button_play</sprite>
-    <sprite>sprites\button_arcade</sprite>
-    <sprite>sprites\button_qm</sprite>
-    <sprite>sprites\batton_easy</sprite>
-    <sprite>sprites\batton_hard</sprite>
-    <sprite>sprites\batton_EvE</sprite>
-    <sprite>sprites\batton_PvE</sprite>
+    <sprites name="buttons">
+      <sprite>sprites\button_settings</sprite>
+      <sprite>sprites\button_exit</sprite>
+      <sprite>sprites\batton_PvE</sprite>
+      <sprite>sprites\batton_EvE</sprite>
+      <sprite>sprites\batton_hard</sprite>
+      <sprite>sprites\batton_easy</sprite>
+      <sprite>sprites\button_arcade</sprite>
+      <sprite>sprites\button_play</sprite>
+      <sprite>sprites\button_qm</sprite>
+      <sprite>sprites\button_creators</sprite>
+      <sprite>sprites\button_arcade_click</sprite>
+      <sprite>sprites\button_play_click</sprite>
+      <sprite>sprites\button_creators_click</sprite>
+      <sprite>sprites\button_exit_click</sprite>
+      <sprite>sprites\batton_PvE_click</sprite>
+      <sprite>sprites\batton_easy_click</sprite>
+      <sprite>sprites\batton_EvE_click</sprite>
+      <sprite>sprites\button_qm_click</sprite>
+      <sprite>sprites\button_settings_click</sprite>
+      <sprite>sprites\batton_hard_click</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\менюбэк</background>
+    <background>background\menu_back</background>
+    <background>background\back_creators</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
@@ -105,20 +118,27 @@
     <object>objects\Player_2</object>
     <object>objects\portal</object>
     <object>objects\Ray</object>
-    <object>objects\btn_exit</object>
-    <object>objects\btn_settings</object>
-    <object>objects\btn_creators</object>
-    <object>objects\btn_play</object>
-    <object>objects\btn_arcade</object>
-    <object>objects\btn_qm</object>
-    <object>objects\btn_easy</object>
-    <object>objects\btn_hard</object>
-    <object>objects\bt_EvE</object>
-    <object>objects\btn_PvE</object>
+    <objects name="menu_buttons">
+      <object>objects\btn_exit</object>
+      <object>objects\btn_settings</object>
+      <object>objects\btn_play</object>
+      <object>objects\btn_arcade</object>
+      <object>objects\btn_creators</object>
+      <object>objects\btn_qm</object>
+      <object>objects\bt_EvE</object>
+      <object>objects\btn_PvE</object>
+      <object>objects\btn_easy_EvE</object>
+      <object>objects\btn_easy_PvE</object>
+      <object>objects\btn_easy_acrade</object>
+      <object>objects\btn_hard_EvE</object>
+      <object>objects\btn_hard_PvE</object>
+      <object>objects\btn_hard_arcade</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
     <room>rooms\menu</room>
+    <room>rooms\creators</room>
+    <room>rooms\settings</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
