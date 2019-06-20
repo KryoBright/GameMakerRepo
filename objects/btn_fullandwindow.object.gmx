@@ -33,7 +33,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>1</string>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -55,15 +55,15 @@
         <arguments>
           <argument>
             <kind>5</kind>
-            <sprite>button_window</sprite>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
+            <sprite>button_full</sprite>
           </argument>
           <argument>
             <kind>0</kind>
             <string>1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
