@@ -29,6 +29,8 @@
 delay=0
 plr1_fin=false
 plr2_fin=false
+plr1_dd=false
+plr2_dd=false
 set=false
 p1x=0
 p2x=0
@@ -106,10 +108,10 @@ if ((game_state==5)and(delay&lt;0.05))
         Trey.plr.hp=0
     }
 }
-if ((plr1_fin)and(plr2_fin)and(game_state==4))
+if ((((plr1_fin)and(plr2_fin))or(plr1_dd)or(plr2_dd))and(game_state==4))
 {
-    if (instance_find(Projectile,0)==noone)
-    if ((Trey.plr.hitstun+Trey.plr.atcstun+Trey.plr.block_delay+Trey_player2.plr.hitstun+Trey_player2.plr.atcstun+Trey_player2.plr.block_delay)&lt;=0)
+    if ((instance_find(Projectile,0)==noone)or(plr1_dd)or(plr2_dd))
+    if (((Trey.plr.hitstun+Trey.plr.atcstun+Trey.plr.block_delay+Trey_player2.plr.hitstun+Trey_player2.plr.atcstun+Trey_player2.plr.block_delay)&lt;=0)or(plr1_dd)or(plr2_dd))
     game_state++
 }
 </string>

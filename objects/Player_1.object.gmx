@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>anim=0
+tr=-1
 hp=100
 prev_hp=100
 block_delay=0
@@ -98,6 +99,7 @@ if ((hitstun==1/60)and(prev_hp!=hp))
 if (atcstun&lt;=0)
 {
     image_speed=0
+    image_index=0
 }
 if (debuff[2]&gt;0)
 {
@@ -151,6 +153,14 @@ if (hp&lt;=0)
 {
     miragecoordinator.plr1_fin=true
     miragecoordinator.plr2_fin=true
+    if (tr==Trey)
+    {
+        miragecoordinator.plr1_dd=true
+    }
+    else
+    {
+        miragecoordinator.plr2_dd=true
+    }
 }
 if (Ch_s_a)
 {

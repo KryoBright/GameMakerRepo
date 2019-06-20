@@ -46,6 +46,7 @@
           <argument>
             <kind>1</kind>
             <string>char_index=0
+AId=false
 cur=0
 c=4
 action_tablets[c*6]=0
@@ -83,6 +84,7 @@ car.image_xscale=2/c
 car.image_yscale=2/c
 car.tr=self
 plr=instance_create(self.x+350,self.y+200,Player_1)
+plr.tr=self
 switch (char_index)
 {
     case 6:
@@ -133,7 +135,6 @@ while (i&lt;c*6)
     }
     i++
 }
-
 if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(plr.block_delay&lt;=0)and(action_panels[cur div 4].bb_stat==0))
 {
     act=action_tablets[cur]
@@ -364,6 +365,7 @@ if (cur&gt;23)
     }
     cur=24
 }
+
 </string>
           </argument>
         </arguments>

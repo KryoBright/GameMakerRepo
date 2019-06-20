@@ -89,6 +89,12 @@
       <sprite>sprites\ProjectileSprite</sprite>
     </sprites>
     <sprites name="Roster">
+      <sprite>sprites\CaretCharPlayer1</sprite>
+      <sprite>sprites\CaretCharPlayer2</sprite>
+      <sprite>sprites\RandomCharSprite</sprite>
+      <sprite>sprites\PickCharSprite</sprite>
+      <sprite>sprites\ConfirmChoiceSprite</sprite>
+      <sprite>sprites\ResetChoiceSprite</sprite>
       <sprite>sprites\MarieCSprite</sprite>
       <sprite>sprites\ChiesterSprite</sprite>
       <sprite>sprites\PFSprite</sprite>
@@ -109,12 +115,6 @@
       <sprite>sprites\Buffs</sprite>
       <sprite>sprites\ReadyButton</sprite>
     </sprites>
-    <sprite>sprites\CaretCharPlayer2</sprite>
-    <sprite>sprites\CaretCharPlayer1</sprite>
-    <sprite>sprites\PickCharSprite</sprite>
-    <sprite>sprites\RandomCharSprite</sprite>
-    <sprite>sprites\ConfirmChoiceSprite</sprite>
-    <sprite>sprites\ResetChoiceSprite</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -130,6 +130,13 @@
       <object>objects\ExitButton</object>
     </objects>
     <objects name="Roster">
+      <object>objects\ResetChoiceButton</object>
+      <object>objects\Chars</object>
+      <object>objects\ConfirmChoiceButton</object>
+      <object>objects\ClickChar</object>
+      <object>objects\RandomChar</object>
+      <object>objects\PickChar</object>
+      <object>objects\CharObj</object>
     </objects>
     <objects name="BattleRoom">
       <object>objects\Trey</object>
@@ -145,13 +152,6 @@
       <object>objects\BB_panel</object>
       <object>objects\lazer</object>
     </objects>
-    <object>objects\ResetChoiceButton</object>
-    <object>objects\CharObj</object>
-    <object>objects\PickChar</object>
-    <object>objects\ClickChar</object>
-    <object>objects\Chars</object>
-    <object>objects\RandomChar</object>
-    <object>objects\ConfirmChoiceButton</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>

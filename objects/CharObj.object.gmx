@@ -25,13 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(Chars.player == 1)
+            <string>if(Chars.plr == 1)
 {
 tmp = instance_create(self.x,self.y,ClickChar)
 tmp.sprite_index=CaretCharPlayer1
 instance_create(960,640,PickChar)
 }
-if(Chars.player == 2)
+if(Chars.plr == 2)
 {
 tmp = instance_create(self.x,self.y,ClickChar)
 tmp.sprite_index=CaretCharPlayer2
