@@ -53,8 +53,7 @@
   <instances>
     <instance objName="BackToMMenuButton" x="0" y="0" name="inst_7F92DB5C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Chars" x="448" y="32" name="inst_5667E27A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="PickChar" x="1216" y="640" name="inst_A0B17D4C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="RandomChar" x="1056" y="640" name="inst_A471B84A" locked="0" code="" scaleX="0.979591846466065" scaleY="0.551724135875702" colour="4294967295" rotation="0"/>
+    <instance objName="RandomChar" x="832" y="640" name="inst_A471B84A" locked="0" code="" scaleX="0.959999978542328" scaleY="0.959999978542328" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
