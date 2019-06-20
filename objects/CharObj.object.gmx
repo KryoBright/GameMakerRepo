@@ -29,13 +29,13 @@
 {
 tmp = instance_create(self.x,self.y,ClickChar)
 tmp.sprite_index=CaretCharPlayer1
-instance_create(960,640,PickChar)
+instance_create(1088,640,PickChar)
 }
 if(Chars.plr == 2)
 {
 tmp = instance_create(self.x,self.y,ClickChar)
 tmp.sprite_index=CaretCharPlayer2
-instance_create(960,640,PickChar)
+instance_create(1088,640,PickChar)
 }
 </string>
           </argument>
