@@ -58,9 +58,9 @@ if(Chars.plr == 1)
     p1.image_xscale=0.7
     p1.image_yscale=0.7
     i = 0
-    Chars.player = 2
+    Chars.plr = 2
 }
-else if(Chars.player == 2)
+else if(Chars.plr == 2)
 {
     instance_create(1088,640,PickChar)
     PickChar.player2Char = i
@@ -74,7 +74,7 @@ else if(Chars.player == 2)
     tmp1.y -=1000
     tmp1 = instance_create(896,640,ResetChoiceButton)
     tmp1 = instance_create(1088,640,ConfirmChoiceButton)
-    Chars.player = 3
+    Chars.plr = 3
 }
 </string>
           </argument>

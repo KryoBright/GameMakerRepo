@@ -28,14 +28,12 @@
         <sprite>sprites\marie_irradiation</sprite>
         <sprite>sprites\marie_bb_1</sprite>
       </sprites>
-        <sprite>sprites\bill_lazer</sprite>
-        <sprite>sprites\bill_bb1</sprite>
-        <sprite>sprites\bill_pistol</sprite>
-        <sprite>sprites\bill_done</sprite>
-        <sprite>sprites\bill_pistol_2</sprite>
-        <sprite>sprites\bill_minigun</sprite>
-      <sprites name="Bill">
-      </sprites>
+      <sprite>sprites\bill_lazer</sprite>
+      <sprite>sprites\bill_bb1</sprite>
+      <sprite>sprites\bill_pistol</sprite>
+      <sprite>sprites\bill_done</sprite>
+      <sprite>sprites\bill_pistol_2</sprite>
+      <sprite>sprites\bill_minigun</sprite>
     </sprites>
     <sprites name="Projectiles">
       <sprites name="Bill">
@@ -130,7 +128,7 @@
     <sprite>sprites\PickCharSprite</sprite>
     <sprite>sprites\ConfirmChoiceSprite</sprite>
     <sprite>sprites\ResetChoiceSprite</sprite>
-      <sprite>sprites\button_settings</sprite>
+    <sprite>sprites\button_settings</sprite>
     <sprites name="buttons">
       <sprite>sprites\button_exit</sprite>
       <sprite>sprites\button_PvE</sprite>
@@ -204,6 +202,7 @@
       <object>objects\btn_exit</object>
       <object>objects\btn_settings</object>
       <object>objects\btn_arcade</object>
+      <object>objects\btn_fullandwindow</object>
       <object>objects\btn_play</object>
       <object>objects\btn_qm</object>
       <object>objects\btn_creators</object>
@@ -219,16 +218,13 @@
       <object>objects\btn_back</object>
       <object>objects\btn_sounds</object>
     </objects>
-      <object>objects\btn_fullandwindow</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\MainMenu</room>
-    <room>rooms\Settings</room>
     <room>rooms\Roster</room>
-    <room>rooms\FightRoom</room>
     <room>rooms\menu</room>
-    <room>rooms\creators</room>
     <room>rooms\settings</room>
+    <room>rooms\creators</room>
+    <room>rooms\FightRoom</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

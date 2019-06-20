@@ -52,7 +52,7 @@ player2Char = -1
             <string>i = 0
 a = 0
 b = 0
-if(instance_exists(ClickChar) and Chars.player == 1)
+if(instance_exists(ClickChar) and Chars.plr == 1)
 {
     while(Chars.tmp[i].x != ClickChar.x || Chars.tmp[i].y != ClickChar.y)
     {
@@ -83,7 +83,7 @@ else if(instance_exists(ClickChar) and Chars.plr == 2)
     tmp1.y -=1000
     tmp1 = instance_create(896,640,ResetChoiceButton)
     tmp1 = instance_create(1088,640,ConfirmChoiceButton)
-    Chars.player = 3
+    Chars.plr = 3
 }
 </string>
           </argument>
