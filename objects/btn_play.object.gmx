@@ -85,7 +85,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>click_play = 1;
+            <string>k=0;
+if(k==0)
+{
+    instance_create(224,384,btn_arcade);
+    instance_create(1152,384,btn_qm);
+    k=k+1;
+}
 </string>
           </argument>
         </arguments>

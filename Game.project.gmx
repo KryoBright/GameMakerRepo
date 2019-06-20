@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sound0</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\Caret</sprite>
     <sprite>sprites\Panel</sprite>
@@ -82,24 +84,34 @@
     <sprites name="buttons">
       <sprite>sprites\button_settings</sprite>
       <sprite>sprites\button_exit</sprite>
-      <sprite>sprites\batton_PvE</sprite>
-      <sprite>sprites\batton_EvE</sprite>
-      <sprite>sprites\batton_hard</sprite>
-      <sprite>sprites\batton_easy</sprite>
+      <sprite>sprites\button_PvE</sprite>
+      <sprite>sprites\button_EvE</sprite>
+      <sprite>sprites\button_hard</sprite>
+      <sprite>sprites\button_easy</sprite>
       <sprite>sprites\button_arcade</sprite>
       <sprite>sprites\button_play</sprite>
       <sprite>sprites\button_qm</sprite>
       <sprite>sprites\button_creators</sprite>
-      <sprite>sprites\button_arcade_click</sprite>
       <sprite>sprites\button_play_click</sprite>
       <sprite>sprites\button_creators_click</sprite>
       <sprite>sprites\button_exit_click</sprite>
-      <sprite>sprites\batton_PvE_click</sprite>
-      <sprite>sprites\batton_easy_click</sprite>
-      <sprite>sprites\batton_EvE_click</sprite>
-      <sprite>sprites\button_qm_click</sprite>
+      <sprite>sprites\button_easy_click</sprite>
       <sprite>sprites\button_settings_click</sprite>
-      <sprite>sprites\batton_hard_click</sprite>
+      <sprite>sprites\button_hard_click</sprite>
+      <sprite>sprites\button_arcade_click</sprite>
+      <sprite>sprites\button_PvE_click</sprite>
+      <sprite>sprites\button_EvE_click</sprite>
+      <sprite>sprites\button_qm_click</sprite>
+      <sprite>sprites\button_back</sprite>
+      <sprite>sprites\button_back_click</sprite>
+      <sprite>sprites\button_music</sprite>
+      <sprite>sprites\button_music_click</sprite>
+      <sprite>sprites\button_sounds</sprite>
+      <sprite>sprites\button_sounds_click</sprite>
+      <sprite>sprites\button_full</sprite>
+      <sprite>sprites\button_full_click</sprite>
+      <sprite>sprites\button_window</sprite>
+      <sprite>sprites\button_window_click</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -125,7 +137,7 @@
       <object>objects\btn_arcade</object>
       <object>objects\btn_creators</object>
       <object>objects\btn_qm</object>
-      <object>objects\bt_EvE</object>
+      <object>objects\btn_EvE</object>
       <object>objects\btn_PvE</object>
       <object>objects\btn_easy_EvE</object>
       <object>objects\btn_easy_PvE</object>
@@ -133,6 +145,11 @@
       <object>objects\btn_hard_EvE</object>
       <object>objects\btn_hard_PvE</object>
       <object>objects\btn_hard_arcade</object>
+      <object>objects\btn_back</object>
+      <object>objects\btn_music</object>
+      <object>objects\btn_sounds</object>
+      <object>objects\btn_full</object>
+      <object>objects\btn_window</object>
     </objects>
   </objects>
   <rooms name="rooms">
