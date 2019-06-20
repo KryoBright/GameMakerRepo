@@ -7,8 +7,8 @@
   <coltolerance>0</coltolerance>
   <sepmasks>-1</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>0</bbox_left>
-  <bbox_right>409</bbox_right>
+  <bbox_left>46</bbox_left>
+  <bbox_right>473</bbox_right>
   <bbox_top>0</bbox_top>
   <bbox_bottom>499</bbox_bottom>
   <HTile>0</HTile>
@@ -17,7 +17,7 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>410</width>
+  <width>499</width>
   <height>500</height>
   <frames>
     <frame index="0">images\bill_bb1_0.png</frame>
