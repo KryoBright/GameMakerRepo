@@ -15,6 +15,15 @@
         <sprite>sprites\marie_alkali</sprite>
         <sprite>sprites\marie_radiation</sprite>
         <sprite>sprites\marie_irradiation</sprite>
+        <sprite>sprites\marie_bb_1</sprite>
+      </sprites>
+      <sprites name="Bill">
+        <sprite>sprites\bill_lazer</sprite>
+        <sprite>sprites\bill_bb1</sprite>
+        <sprite>sprites\bill_done</sprite>
+        <sprite>sprites\bill_pistol</sprite>
+        <sprite>sprites\bill_pistol_2</sprite>
+        <sprite>sprites\bill_minigun</sprite>
       </sprites>
       <sprites name="Other">
         <sprite>sprites\player</sprite>
