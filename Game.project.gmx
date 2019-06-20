@@ -10,9 +10,17 @@
     <sprite>sprites\Panel</sprite>
     <sprite>sprites\Tablet</sprite>
     <sprites name="Players">
-      <sprite>sprites\opponent</sprite>
-      <sprite>sprites\opponent_fun</sprite>
-      <sprite>sprites\player</sprite>
+      <sprites name="Marie Curie">
+        <sprite>sprites\marie_acid</sprite>
+        <sprite>sprites\marie_alkali</sprite>
+        <sprite>sprites\marie_radiation</sprite>
+        <sprite>sprites\marie_irradiation</sprite>
+      </sprites>
+      <sprites name="Other">
+        <sprite>sprites\player</sprite>
+        <sprite>sprites\opponent_fun</sprite>
+        <sprite>sprites\opponent</sprite>
+      </sprites>
     </sprites>
     <sprites name="Projectiles">
       <sprites name="Bill">
@@ -68,6 +76,7 @@
         <sprite>sprites\light_acid</sprite>
         <sprite>sprites\radium</sprite>
         <sprite>sprites\acid</sprite>
+        <sprite>sprites\alkali</sprite>
       </sprites>
       <sprites name="Banana">
         <sprite>sprites\banana_peel</sprite>
