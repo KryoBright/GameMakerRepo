@@ -88,7 +88,7 @@ instance_destroy(right)
             <kind>1</kind>
             <string>if (right==-1)
 {
-    right=instance_create(x+17,y,lazer)
+    right=instance_create(x+17*set_player,y,lazer)
     right.left=self
     right.delay=delay
 }
@@ -99,6 +99,32 @@ if (delay==0)
 else
 {
     delay-=1/30
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="lazer">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (other.own_plr!=own_plr)
+{
+    instance_destroy(other)
 }
 </string>
           </argument>
