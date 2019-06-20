@@ -18,7 +18,6 @@
       <sprites name="Bill">
         <sprite>sprites\energetic_ball</sprite>
         <sprite>sprites\blue_lazer</sprite>
-        <sprite>sprites\bill_lazer</sprite>
       </sprites>
       <sprites name="Chiester">
         <sprite>sprites\golden_arrow</sprite>
@@ -45,8 +44,8 @@
         <sprite>sprites\tennis_ball</sprite>
       </sprites>
       <sprites name="Other projectiles">
-        <sprite>sprites\FIre_meteor</sprite>
-        <sprite>sprites\Fireball</sprite>
+        <sprite>sprites\fIre_meteor</sprite>
+        <sprite>sprites\fireball</sprite>
         <sprite>sprites\template_projectile</sprite>
       </sprites>
       <sprites name="Tanos">
@@ -58,16 +57,17 @@
         <sprite>sprites\magic</sprite>
         <sprite>sprites\ignite</sprite>
         <sprite>sprites\ice_projectile</sprite>
-        <sprite>sprites\Vlad_rock</sprite>
+        <sprite>sprites\vlad_rock</sprite>
         <sprite>sprites\fire_rock</sprite>
       </sprites>
       <sprites name="Zilean">
-        <sprite>sprites\Time_magic</sprite>
+        <sprite>sprites\time_magic</sprite>
         <sprite>sprites\time_bomb</sprite>
       </sprites>
       <sprites name="Marie Curie">
-        <sprite>sprites\bottle</sprite>
+        <sprite>sprites\light_acid</sprite>
         <sprite>sprites\radium</sprite>
+        <sprite>sprites\acid</sprite>
       </sprites>
       <sprites name="Banana">
         <sprite>sprites\banana_peel</sprite>
