@@ -75,10 +75,8 @@ else if(instance_exists(ClickChar) and Chars.player == 2)
     p2.sprite_index=Chars.char[i];
     p2.image_xscale=0.7
     p2.image_yscale=0.7*/
-    tmp1 = instance_create(1088,640,ConfirmButton)
-    tmp1.sprite_index = ResetChoiceSprite
-    tmp1 = instance_create(1216,640,ConfirmButton)
-    tmp1.sprite_index = ConfirmChoiceSprite
+    tmp1 = instance_create(1088,640,ResetChoiceButton)
+    tmp1 = instance_create(1216,640,ConfirmChoiceButton)
 }
 </string>
           </argument>

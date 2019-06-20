@@ -52,11 +52,12 @@
     <object>objects\Player_2</object>
     <object>objects\GameName</object>
     <object>objects\CharObj</object>
+    <object>objects\ResetChoiceButton</object>
     <object>objects\PickChar</object>
     <object>objects\ClickChar</object>
     <object>objects\Chars</object>
     <object>objects\RandomChar</object>
-    <object>objects\ConfirmButton</object>
+    <object>objects\ConfirmChoiceButton</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>
