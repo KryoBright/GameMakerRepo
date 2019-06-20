@@ -7,18 +7,18 @@
   <coltolerance>0</coltolerance>
   <sepmasks>-1</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>1</bbox_left>
-  <bbox_right>184</bbox_right>
-  <bbox_top>1</bbox_top>
-  <bbox_bottom>260</bbox_bottom>
+  <bbox_left>2</bbox_left>
+  <bbox_right>353</bbox_right>
+  <bbox_top>2</bbox_top>
+  <bbox_bottom>498</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>186</width>
-  <height>262</height>
+  <width>355</width>
+  <height>500</height>
   <frames>
     <frame index="0">images\Chiester410n45_0.png</frame>
     <frame index="1">images\Chiester410n45_1.png</frame>

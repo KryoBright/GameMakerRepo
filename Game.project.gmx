@@ -6,27 +6,23 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\Caret</sprite>
-    <sprite>sprites\Panel</sprite>
-    <sprite>sprites\Tablet</sprite>
-    <sprite>sprites\ProjectileSprite</sprite>
-    <sprite>sprites\ReadyButton</sprite>
-    <sprite>sprites\Buffs</sprite>
-    <sprite>sprites\debuffs</sprite>
-    <sprite>sprites\VictoryScreen</sprite>
     <sprites name="Players">
       <sprite>sprites\Marie</sprite>
-      <sprite>sprites\opponent</sprite>
-      <sprite>sprites\opponent_fun</sprite>
-      <sprite>sprites\player</sprite>
       <sprites name="Chiester">
         <sprite>sprites\Chiester_normal</sprite>
         <sprite>sprites\Chiester410n45</sprite>
+        <sprite>sprites\Chiester_target_sys</sprite>
+        <sprite>sprites\Chiester_BB</sprite>
       </sprites>
       <sprites name="Bill">
         <sprite>sprites\Bill_gun</sprite>
         <sprite>sprites\Bill_rifle</sprite>
         <sprite>sprites\Bill_MG</sprite>
+      </sprites>
+      <sprites name="Beta">
+        <sprite>sprites\opponent</sprite>
+        <sprite>sprites\opponent_fun</sprite>
+        <sprite>sprites\player</sprite>
       </sprites>
     </sprites>
     <sprites name="Projectiles">
@@ -90,25 +86,30 @@
         <sprite>sprites\banana_barrier</sprite>
         <sprite>sprites\rocket</sprite>
       </sprites>
+      <sprite>sprites\ProjectileSprite</sprite>
     </sprites>
-    <sprite>sprites\sprite3</sprite>
-    <sprite>sprites\sprite4</sprite>
-    <sprite>sprites\sprite5</sprite>
-    <sprite>sprites\sprite6</sprite>
-    <sprite>sprites\Back</sprite>
-    <sprite>sprites\Exit</sprite>
-    <sprite>sprites\MarieCSprite</sprite>
-    <sprite>sprites\DZSprite</sprite>
-    <sprite>sprites\ThanosSprite</sprite>
-    <sprite>sprites\ZileanSprite</sprite>
-    <sprite>sprites\CMSprite</sprite>
-    <sprite>sprites\BananaSprite</sprite>
-    <sprite>sprites\BillSprite</sprite>
-    <sprite>sprites\VladSprite</sprite>
-    <sprite>sprites\PFSprite</sprite>
-    <sprite>sprites\GameNameSprite</sprite>
-    <sprite>sprites\ChiesterSprite</sprite>
-    <sprite>sprites\CaretChar</sprite>
+    <sprites name="Roster">
+      <sprite>sprites\CaretChar</sprite>
+      <sprite>sprites\MarieCSprite</sprite>
+      <sprite>sprites\ChiesterSprite</sprite>
+      <sprite>sprites\PFSprite</sprite>
+      <sprite>sprites\VladSprite</sprite>
+      <sprite>sprites\BillSprite</sprite>
+      <sprite>sprites\BananaSprite</sprite>
+      <sprite>sprites\CMSprite</sprite>
+      <sprite>sprites\ZileanSprite</sprite>
+      <sprite>sprites\ThanosSprite</sprite>
+      <sprite>sprites\DZSprite</sprite>
+    </sprites>
+    <sprites name="BattleRoom">
+      <sprite>sprites\Caret</sprite>
+      <sprite>sprites\Panel</sprite>
+      <sprite>sprites\Tablet</sprite>
+      <sprite>sprites\VictoryScreen</sprite>
+      <sprite>sprites\debuffs</sprite>
+      <sprite>sprites\Buffs</sprite>
+      <sprite>sprites\ReadyButton</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -116,28 +117,35 @@
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\Trey</object>
-    <object>objects\Trey_player2</object>
-    <object>objects\panelObj</object>
-    <object>objects\tabletObj</object>
-    <object>objects\caretObj</object>
-    <object>objects\StartButton</object>
-    <object>objects\PvPButton</object>
-    <object>objects\PvEButton</object>
-    <object>objects\SettingsButton</object>
-    <object>objects\ExitButton</object>
-    <object>objects\BackToMMenuButton</object>
-    <object>objects\Projectile</object>
-    <object>objects\Player_1</object>
-    <object>objects\Start</object>
-    <object>objects\PlayerHealth</object>
-    <object>objects\miragecoordinator</object>
-    <object>objects\GameName</object>
-    <object>objects\CharObj</object>
-    <object>objects\PickChar</object>
-    <object>objects\ClickChar</object>
-    <object>objects\Chars</object>
-    <object>objects\RandomChar</object>
+    <objects name="Menu">
+      <object>objects\StartButton</object>
+      <object>objects\PvPButton</object>
+      <object>objects\PvEButton</object>
+      <object>objects\SettingsButton</object>
+      <object>objects\ExitButton</object>
+    </objects>
+    <objects name="Roster">
+      <object>objects\RandomChar</object>
+      <object>objects\Chars</object>
+      <object>objects\ClickChar</object>
+      <object>objects\PickChar</object>
+      <object>objects\CharObj</object>
+      <object>objects\BackToMMenuButton</object>
+    </objects>
+    <objects name="BattleRoom">
+      <object>objects\Trey</object>
+      <object>objects\Trey_player2</object>
+      <object>objects\panelObj</object>
+      <object>objects\tabletObj</object>
+      <object>objects\caretObj</object>
+      <object>objects\Projectile</object>
+      <object>objects\Player_1</object>
+      <object>objects\Start</object>
+      <object>objects\PlayerHealth</object>
+      <object>objects\miragecoordinator</object>
+      <object>objects\BB_panel</object>
+      <object>objects\lazer</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>

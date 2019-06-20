@@ -41,6 +41,17 @@ grav=false
 image_xscale=0.25
 image_yscale=0.25
 own_plr=0
+dvd=false
+dvdt=0.6
+homing=false
+dtime=random(3.14/2)
+i=0
+while (i&lt;10)
+{
+    debuff[i]=0
+    i++
+}
+chased=false
 </string>
           </argument>
         </arguments>
@@ -65,7 +76,7 @@ own_plr=0
             <kind>1</kind>
             <string>if (grav)
 {
-v_speed-=1/18*(p_speed/8)
+v_speed-=1/12*(p_speed/8)
 y=y-v_speed
 }
 randomize()
@@ -88,6 +99,47 @@ if(magic_skill)
 }
 if(just_projectile)
 self.x+=p_speed*set_player
+if (dvd)
+{
+    if (dvdt&lt;0)
+    {
+        tmp=instance_create(x,y+25,Projectile)
+        {
+            tmp.damage = 7.5
+            tmp.hitstun=0.3
+            tmp.set_collision=true
+            tmp.set_player=set_player
+            tmp.own_plr=own_plr
+            dvd=false
+            tmp.sprite_index=sprite_index
+            tmp.image_xscale=image_xscale
+            tmp.image_yscale=image_yscale
+        }
+        tmp=instance_create(x,y-25,Projectile)
+        {
+            tmp.damage = 7.5
+            tmp.hitstun=0.3
+            tmp.set_collision=true
+            tmp.set_player=set_player
+            tmp.own_plr=own_plr
+            dvd=false      
+            tmp.sprite_index=sprite_index
+            tmp.image_xscale=image_xscale
+            tmp.image_yscale=image_yscale
+        }
+    }
+    else
+    {
+        dvdt-=1/60
+    }
+}
+if (homing)
+{
+    y=y+2*cos(dtime)
+    x=x+2*sin(dtime)
+    dtime+=1/10
+}
+
 </string>
           </argument>
         </arguments>
@@ -129,7 +181,30 @@ self.x+=p_speed*set_player
     }
     other.hitstun=hitstun
     }
+    i=0
+    while (i&lt;10)
+    {
+        other.debuff[i]+=debuff[i]
+        i++
+    }
     instance_destroy(self)
+    effect_create_above(ef_spark,self.x,self.y+5,1,c_yellow)
+    if ((debuff[4])and(damage&gt;0))
+    {
+        tmp=instance_create(x-400*set_player,y,Projectile)
+            {
+                tmp.damage = damage-2.5
+                tmp.hitstun=0
+                tmp.p_speed=1.3*p_speed
+                tmp.set_collision=true
+                tmp.set_player=set_player
+                tmp.own_plr=own_plr
+                tmp.debuff[4]=1
+                tmp.sprite_index=sprite_index
+                tmp.image_xscale=image_xscale
+                tmp.image_yscale=image_yscale
+            }
+    }
 }
 </string>
           </argument>
@@ -157,6 +232,7 @@ self.x+=p_speed*set_player
 {
     instance_destroy(other)
     instance_destroy(self)
+    effect_create_above(ef_spark,self.x,self.y+5,1,c_yellow)
 }
 </string>
           </argument>
