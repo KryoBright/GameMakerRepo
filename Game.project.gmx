@@ -82,16 +82,17 @@
     <sprite>sprites\sprite_portal</sprite>
     <sprite>sprites\it</sprite>
     <sprites name="buttons">
-      <sprite>sprites\button_settings</sprite>
       <sprite>sprites\button_exit</sprite>
+      <sprite>sprites\button_settings</sprite>
+      <sprite>sprites\button_creators</sprite>
+      <sprite>sprites\button_play</sprite>
+      <sprite>sprites\button_arcade</sprite>
+      <sprite>sprites\button_qm</sprite>
+      <sprite>sprites\button_PvP</sprite>
       <sprite>sprites\button_PvE</sprite>
       <sprite>sprites\button_EvE</sprite>
       <sprite>sprites\button_hard</sprite>
       <sprite>sprites\button_easy</sprite>
-      <sprite>sprites\button_arcade</sprite>
-      <sprite>sprites\button_play</sprite>
-      <sprite>sprites\button_qm</sprite>
-      <sprite>sprites\button_creators</sprite>
       <sprite>sprites\button_back</sprite>
       <sprite>sprites\button_music</sprite>
       <sprite>sprites\button_sounds</sprite>
@@ -117,17 +118,18 @@
     <objects name="menu_buttons">
       <object>objects\btn_exit</object>
       <object>objects\btn_settings</object>
+      <object>objects\btn_creators</object>
       <object>objects\btn_play</object>
       <object>objects\btn_arcade</object>
-      <object>objects\btn_creators</object>
       <object>objects\btn_qm</object>
-      <object>objects\btn_EvE</object>
+      <object>objects\btn_PvP</object>
       <object>objects\btn_PvE</object>
-      <object>objects\btn_easy_EvE</object>
+      <object>objects\btn_EvE</object>
       <object>objects\btn_easy_PvE</object>
+      <object>objects\btn_easy_EvE</object>
       <object>objects\btn_easy_acrade</object>
-      <object>objects\btn_hard_EvE</object>
       <object>objects\btn_hard_PvE</object>
+      <object>objects\btn_hard_EvE</object>
       <object>objects\btn_hard_arcade</object>
       <object>objects\btn_back</object>
       <object>objects\btn_music</object>

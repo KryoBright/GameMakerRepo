@@ -109,8 +109,8 @@
           <argument>
             <kind>1</kind>
             <string>
-instance_create(590, 530, btn_easy_EvE);
-instance_create(872, 530, btn_hard_EvE);
+instance_create(576, 704, btn_easy_EvE);
+instance_create(864, 704, btn_hard_EvE);
 
 </string>
           </argument>
