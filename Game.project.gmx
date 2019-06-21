@@ -30,10 +30,10 @@
       </sprites>
       <sprite>sprites\bill_lazer</sprite>
       <sprite>sprites\bill_bb1</sprite>
-      <sprite>sprites\bill_pistol</sprite>
+      <sprite>sprites\Bill_gun</sprite>
       <sprite>sprites\bill_done</sprite>
-      <sprite>sprites\bill_pistol_2</sprite>
-      <sprite>sprites\bill_minigun</sprite>
+      <sprite>sprites\Bill_rifle</sprite>
+      <sprite>sprites\Bill_MG</sprite>
     </sprites>
     <sprites name="Projectiles">
       <sprites name="Bill">
@@ -86,7 +86,7 @@
         <sprite>sprites\time_bomb</sprite>
       </sprites>
       <sprites name="Marie Curie">
-        <sprite>sprites\light_acid</sprite>
+        <sprite>sprites\bottle</sprite>
         <sprite>sprites\radium</sprite>
         <sprite>sprites\acid</sprite>
         <sprite>sprites\alkali</sprite>
@@ -183,6 +183,7 @@
       <object>objects\RandomChar</object>
       <object>objects\PickChar</object>
       <object>objects\CharObj</object>
+      <object>objects\TextofPlayer</object>
     </objects>
     <objects name="BattleRoom">
       <object>objects\Trey</object>
@@ -191,10 +192,10 @@
       <object>objects\tabletObj</object>
       <object>objects\caretObj</object>
       <object>objects\Projectile</object>
+      <object>objects\miragecoordinator</object>
       <object>objects\Player_1</object>
       <object>objects\Start</object>
       <object>objects\PlayerHealth</object>
-      <object>objects\miragecoordinator</object>
       <object>objects\BB_panel</object>
       <object>objects\lazer</object>
     </objects>
@@ -218,10 +219,13 @@
       <object>objects\btn_back</object>
       <object>objects\btn_sounds</object>
     </objects>
+    <objects name="WorldWide">
+      <object>objects\HAL</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\Roster</room>
     <room>rooms\menu</room>
+    <room>rooms\Roster</room>
     <room>rooms\settings</room>
     <room>rooms\creators</room>
     <room>rooms\FightRoom</room>

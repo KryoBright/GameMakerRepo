@@ -62,7 +62,7 @@ p2x=0
     {
         delay=10
     }
-    delay-=1/60
+    delay-=1/20
     if (delay==0)
     {
         game_state++
@@ -86,7 +86,7 @@ if ((game_state==5)or(game_state==6))
     {
         delay=0.1+(0.4*game_state-5)
     }
-    delay-=1/30
+    delay-=1/10
     if (delay==0)
     {
         game_state++
@@ -94,9 +94,11 @@ if ((game_state==5)or(game_state==6))
 }
 if (game_state==7)
 {
-    room_goto(MainMenu)
+    HAL.need_room=menu
+    HAL.can_go=true
+    HAL.arc_rem--
 }
-if ((game_state==5)and(delay&lt;0.05))
+if ((game_state==5)and(delay&lt;0.51))
 {
     if (Trey.plr.hp&gt;Trey_player2.plr.hp)
     {
