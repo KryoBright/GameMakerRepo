@@ -158,10 +158,12 @@
       <sprite>sprites\button_music</sprite>
       <sprite>sprites\button_music_click</sprite>
       <sprite>sprites\button_sounds</sprite>
-      <sprite>sprites\button_sounds_click</sprite>
       <sprite>sprites\sprite82</sprite>
+      <sprite>sprites\button_full_window</sprite>
+      <sprite>sprites\button_tutorial</sprite>
       <sprite>sprites\button_full</sprite>
       <sprite>sprites\button_window</sprite>
+      <sprite>sprites\button_sounds_click</sprite>
     </sprites>
     <sprites name="Tutorial">
       <sprite>sprites\tablet_ch_sp</sprite>
@@ -229,6 +231,8 @@
       <object>objects\btn_PvP</object>
       <object>objects\btn_back</object>
       <object>objects\btn_sounds</object>
+      <object>objects\btn_full_window</object>
+      <object>objects\btn_tutorial</object>
     </objects>
     <objects name="WorldWide">
       <object>objects\HAL</object>
