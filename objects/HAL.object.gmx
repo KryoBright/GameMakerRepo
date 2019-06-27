@@ -33,7 +33,8 @@ arcade=false
 arc_rem=8
 need_room=-1
 can_go=false
-fullscreen=false
+fullscreen=true
+prep=false
 </string>
           </argument>
         </arguments>
@@ -56,15 +57,59 @@ fullscreen=false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if ((can_go)and(need_room!=-1))
+            <string>if ((room==FightRoom)and(!prep))
 {
-    if ((arcade)and(arc_rem!=0)and(need_room==menu))
-    {
-        room_restart()
-    }
+    Trey.char_index=plr1_chr
+    Trey.AId=plr1_bot
+    Trey.f_launch=true
+    Trey_player2.f_launch=true
+    Trey_player2.char_index=plr2_chr
+    Trey_player2.AId=plr2_bot
+    prep=true
+}
+if ((can_go)and(need_room!=-1))
+{
     room_goto(need_room)
+    if ((arcade)and(arc_rem!=0)and(need_room==menu)and(miragecoordinator.win))
+    {
+        plr2_chr=floor(random(10))
+        room_goto(FightRoom)
+    }
+    else
+    {
+        room_goto(need_room)
+    }
+    prep=false
     can_go=false
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if ((room!=FightRoom)and(room!=creators))
+{
+    background_index[0]=menu_back
+    background_visible[0]=true
+}
+window_set_fullscreen(fullscreen)
 </string>
           </argument>
         </arguments>

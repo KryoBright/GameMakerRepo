@@ -7,18 +7,18 @@
   <coltolerance>0</coltolerance>
   <sepmasks>-1</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>0</bbox_left>
-  <bbox_right>60</bbox_right>
-  <bbox_top>6</bbox_top>
-  <bbox_bottom>63</bbox_bottom>
+  <bbox_left>23</bbox_left>
+  <bbox_right>499</bbox_right>
+  <bbox_top>47</bbox_top>
+  <bbox_bottom>499</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>64</width>
-  <height>64</height>
+  <width>500</width>
+  <height>500</height>
   <frames>
     <frame index="0">images\opponent_0.png</frame>
     <frame index="1">images\opponent_1.png</frame>

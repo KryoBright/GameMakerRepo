@@ -220,7 +220,7 @@ if (buff[3])
             <string>draw_self()
 if (Ch_s_a)
 {
-draw_sprite(Chiester_target_sys,floor(atcstun*32),x+100*team,y)
+draw_sprite(Chiester_target_sys,floor(atcstun*32),x+50*team-50,y)
 }
 </string>
           </argument>

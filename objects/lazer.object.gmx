@@ -88,7 +88,9 @@ instance_destroy(right)
             <kind>1</kind>
             <string>if (right==-1)
 {
-    right=instance_create(x+17*set_player,y,lazer)
+    right=instance_create(x+60*set_player,y,lazer)
+    right.own_plr=own_plr
+    right.set_player=set_player
     right.left=self
     right.delay=delay
 }

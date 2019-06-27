@@ -27,6 +27,12 @@
             <kind>1</kind>
             <string>player1 = PickChar.player1Char
 player2 = PickChar.player2Char
+if (player1&gt;-1)
+HAL.plr1_chr=player1
+if (player2&gt;-1)
+HAL.plr2_chr=player2
+HAL.need_room=FightRoom
+HAL.can_go=true
 </string>
           </argument>
         </arguments>

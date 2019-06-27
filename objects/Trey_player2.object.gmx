@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>char_index=9
+sh_t_m=11
+f_launch=false
 AId=false
 cur=0
 c=4
@@ -84,26 +86,6 @@ active=0
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>531</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_fullscreen</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>4</kind>
-            <string>2</string>
-          </argument>
-        </arguments>
-      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -122,10 +104,37 @@ active=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>i=0
+            <string>if (f_launch)
+{      
+    switch (char_index)
+    {
+        case 6:
+        plr.sprite_index=Bill_gun
+        break
+        case 9:
+        plr.sprite_index=Chiester_normal
+        break
+        default: plr.sprite_index=Marie
+    }
+    f_launch=false
+}
+i=0
 ama=0
 while (i&lt;c*6)
 {
+     if ((miragecoordinator.game_state==1)and(AId))
+        {
+            action_tablets[i].AId=true
+            if (AId==1)or(sh_t_m&gt;6)
+            {
+                action_tablets[i].status=floor(random(11)) 
+            }
+            else
+            {
+                action_tablets[i].status=floor(random(3))+8
+            }
+            sh_t_m=action_tablets[i].status
+        }
     tmp=action_tablets[i].status
     if (tmp&gt;6)
     {
@@ -133,6 +142,10 @@ while (i&lt;c*6)
     }
     i++
 }
+if (((miragecoordinator.game_state==1)or(miragecoordinator.game_state==3))and(AId))
+    {
+        miragecoordinator.game_state++
+    }
 
 if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(plr.block_delay&lt;=0)and(action_panels[cur div 4].bb_stat==0))
 {
@@ -182,16 +195,34 @@ if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr
                 plr.image_speed=0.3
             break
             default:
-                plr.sprite_index=Marie
+                switch (act.status)
+                {
+                    case 8:
+                    plr.sprite_index=Marie
+                    break
+                    case 9:
+                    plr.sprite_index=marie_alkali
+                    break
+                    default:
+                    plr.sprite_index=marie_acid
+                    break
+                }
                 plr.image_speed=0.125
             break
             
         }
+        i=1
         switch(char_index)
         {
+        case 6:
+            {
+              i=power(2,act.status-8)
+            }
         default:
             {
-            tmp=instance_create(plr.x-165,plr.y+40,Projectile)
+            while (i&gt;0)
+            {
+            tmp=instance_create(plr.x-40*i,plr.y+40,Projectile)
             tmp.own_plr=plr
             tmp.set_player=-1
             if (modif==1)
@@ -206,26 +237,48 @@ if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr
             {
                 tmp.p_speed*=0.8
                 plr.atcstun-=0.2
+                tmp.hitstun*=0.8
             }  
             if (modif==4)
             {
                 tmp.p_speed*=1.25
                 plr.atcstun+=0.2
+                tmp.hitstun*=1.25
             }
             plr.atcstun+=(act.status-7)*1/4
             tmp.damage*=(act.status-7)*1/2-ceil(plr.debuff[0])*1/3
-                switch(char_index)
-                {
+               switch(char_index)
+                 {
+                case 6:
+                    tmp.sprite_index=energetic_ball
+                    tmp.image_xscale=-0.5
+                    tmp.image_yscale=0.5
+                    tmp.damage=3        
+                    plr.atcstun=(act.status-7)*1/4
+                break
                     case 9:
                         tmp.sprite_index=golden_arrow
-                        tmp.image_xscale=2
+                        tmp.image_xscale=-2
                         tmp.image_yscale=0.5
                     break
                     default:
-                        tmp.sprite_index=bottle
+                        switch (act.status)
+                        {
+                            case 8:
+                            tmp.sprite_index=bottle
+                            break
+                            case 9:
+                            tmp.sprite_index=alkali
+                            break
+                            default:
+                            tmp.sprite_index=acid
+                            break
+                        }
                         tmp.grav=true
                     break
                     
+                }
+                i--
                 }
             modif=0
             }
@@ -237,6 +290,14 @@ if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr
             {
                 switch (char_index)
                 {
+                case 6:
+                    plr.sprite_index=bill_lazer
+                    plr.image_speed=0.1
+                    tmp=instance_create(plr.x-150,plr.y+40,lazer)
+                    tmp.delay=1.5
+                    tmp.own_plr=plr
+                    tmp.set_player=-1
+                break
                 case 9:
                     plr.sprite_index=Chiester410n45
                     plr.image_speed=0.3
@@ -255,6 +316,8 @@ if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr
                     tmp.image_yscale=0.5 
                 break                    
                 default:
+                    plr.sprite_index=marie_irradiation
+                    plr.image_speed=0.1
                     Trey_player2.plr.debuff[0]=1
                     //enemy rad sprite
                 break
@@ -266,7 +329,11 @@ if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr
             if (modif==6)
             {
                 switch (char_index)
-                {   
+                {   case 6:
+                        tmp=instance_create(plr.x-200,plr.y,Rune)
+                        tmp.image_xscale=plr.image_xscale
+                        tmp.image_yscale=plr.image_yscale   
+                    break
                     case 9:         
                         tmp=instance_create(plr.x-167,plr.y+40,Projectile)
                         tmp.own_plr=plr
@@ -284,6 +351,8 @@ if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr
                         tmp.image_xscale=-tmp.image_xscale
                         break
                     default:
+                        plr.sprite_index=marie_radiation
+                        plr.image_speed=0.1
                         plr.debuff[1]=1
                         plr.buff[floor(random(11))]=1
                         //enemy rad sprite
@@ -300,6 +369,11 @@ if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr
 {
     switch (char_index)
     {
+        case 6:
+            plr.sprite_index=bill_bb1
+            plr.image_speed=0.2
+            plr.buff[0]=0.5
+        break
         case 9:
             tmp=instance_create(plr.x-167,plr.y+40,Projectile)
             tmp.own_plr=plr
@@ -318,6 +392,8 @@ if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr
             tmp.image_xscale=-tmp.image_xscale
             break
         default:
+            plr.sprite_index=marie_bb_1
+            plr.image_speed=0.2
             Trey_player2.plr.debuff[2]=999
             break
     }
@@ -328,6 +404,11 @@ if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr
 {
     switch (char_index)
     {
+        case 6:
+            plr.sprite_index=bill_done
+            plr.image_speed=0.05
+            miragecoordinator.time_stop++
+        break
         case 9:
             plr.sprite_index=Chiester410n45
             plr.Ch_s_a=true

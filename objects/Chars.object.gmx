@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>char[0]=MarieCSprite
+            <string>randomize()
+char[0]=MarieCSprite
 char[1]=DZSprite
 char[2]=ThanosSprite
 char[3]=ZileanSprite

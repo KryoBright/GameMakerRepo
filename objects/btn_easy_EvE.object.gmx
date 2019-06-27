@@ -110,7 +110,7 @@
             <kind>1</kind>
             <string>HAL.plr1_bot=1
 HAL.plr2_bot=1
-HAL.need_room=FightRoom
+HAL.need_room=Roster
 HAL.can_go=true
 HAL.arcade=false
 </string>

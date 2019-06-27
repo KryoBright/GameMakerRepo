@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>damage = 10
+lifetime=3
 p_speed=8
 hitstun=0.3
 set_collision=true
@@ -76,13 +77,13 @@ before_portal=false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (grav)
+            <string>if ((grav)and(miragecoordinator.time_stop&lt;=0))
 {
 v_speed-=1/12*(p_speed/8)
 y=y-v_speed
 }
 randomize()
-if(magic_skill)
+if((magic_skill)and(miragecoordinator.time_stop&lt;=0))
 {
                 self.x+=p_speed*cos(alpha)*set_player
                 self.y+=p_speed*sin(alpha)*set_player
@@ -97,16 +98,16 @@ if(magic_skill)
                    else
                    image_angle-=3 
 }
-if(ult_fineas_and_ferb)
+if((ult_fineas_and_ferb)and(miragecoordinator.time_stop&lt;=0))
 {
     self.x+=p_speed*set_player
     self.y+=(p_speed*set_player)/2
 }
-if(tanos_projectile)
+if((tanos_projectile)and(miragecoordinator.time_stop&lt;=0))
 self.y-=p_speed
-if(just_projectile)
+if((just_projectile)and(miragecoordinator.time_stop&lt;=0))
 self.x+=p_speed*set_player
-if (dvd)
+if ((dvd)and(miragecoordinator.time_stop&lt;=0))
 {
     if (dvdt&lt;0)
     {
@@ -140,11 +141,17 @@ if (dvd)
         dvdt-=1/60
     }
 }
-if (homing)
+if ((homing)and(miragecoordinator.time_stop&lt;=0))
 {
     y=y+2*cos(dtime)
     x=x+2*sin(dtime)
     dtime+=1/10
+}
+if (miragecoordinator.time_stop&lt;=0)
+lifetime-=1/30
+if (lifetime&lt;0)
+{
+    instance_destroy()
 }
 
 </string>

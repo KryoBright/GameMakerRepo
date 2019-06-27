@@ -108,10 +108,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>HAL.plr1_bot=1
+            <string>HAL.plr1_bot=0
 HAL.plr2_bot=2
 HAL.arcade=true
-HAL.need_room=FightRoom
+HAL.need_room=Roster
 HAL.can_go=true
 </string>
           </argument>
