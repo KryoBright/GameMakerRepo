@@ -97,6 +97,7 @@
       <sprite>sprites\button_music</sprite>
       <sprite>sprites\button_sounds</sprite>
       <sprite>sprites\button_full_window</sprite>
+      <sprite>sprites\button_tutorial</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -135,6 +136,7 @@
       <object>objects\btn_music</object>
       <object>objects\btn_sounds</object>
       <object>objects\btn_full_window</object>
+      <object>objects\btn_tutorial</object>
     </objects>
   </objects>
   <rooms name="rooms">
