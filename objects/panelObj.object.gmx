@@ -29,9 +29,12 @@
 bb_stat=0
 image_xscale=0.5
 image_yscale=0.4
+onPlace=false
 image_speed=0
 charged=0
 snum=0
+tr=0
+team=0
 </string>
           </argument>
         </arguments>
@@ -63,7 +66,7 @@ if (i&lt;0)
 }
 while (i&lt;snum)
 {
-    if (Trey.action_panels[i].bb_stat!=0)
+    if (tr.action_panels[i].bb_stat!=0)
     {
         nullchrg=false
     }
@@ -79,22 +82,33 @@ else
     charged=0
     image_index=0;
 }
+if ((miragecoordinator.game_state==1-team)or(miragecoordinator.game_state==3-team))
+{
+    image_index=1
+}
 if (charged==1)
 {
-    if ((Trey.action_tablets[snum*4].status==4)or(Trey.action_tablets[snum*4].status==3))
+    if ((tr.action_tablets[snum*4].status==4)or(tr.action_tablets[snum*4].status==3))
     {
-        if (Trey.action_tablets[snum*4+1].status==8)
+        if (tr.action_tablets[snum*4+1].status==8)
         {
-            if (Trey.action_tablets[snum*4+2].status==9)
+            if (tr.action_tablets[snum*4+2].status==9)
             {
-                if (Trey.action_tablets[snum*4+3].status==10)
+                if (tr.action_tablets[snum*4+3].status==10)
                 {
-                    bb_stat=Trey.action_tablets[snum*4].status-1
+                    bb_stat=tr.action_tablets[snum*4].status-2
                 }
             }
         }
     }
     else bb_stat=0
+}
+if ((miragecoordinator.game_state==4)and(!onPlace))
+{
+    y=768-(768-y)div 2
+    image_xscale=0.25*abs(image_xscale)/image_xscale
+    image_yscale=0.2
+    onPlace=true
 }
 </string>
           </argument>

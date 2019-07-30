@@ -4,39 +4,286 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sound0</sound>
+  </sounds>
   <sprites name="sprites">
-    <sprite>sprites\Panel</sprite>
-    <sprite>sprites\Tablet</sprite>
-    <sprite>sprites\Caret</sprite>
-    <sprite>sprites\sprite3</sprite>
-    <sprite>sprites\sprite4</sprite>
-    <sprite>sprites\sprite5</sprite>
-    <sprite>sprites\sprite6</sprite>
+    <sprites name="Players">
+      <sprite>sprites\Marie</sprite>
+      <sprites name="Chiester">
+        <sprite>sprites\Chiester_normal</sprite>
+        <sprite>sprites\Chiester410n45</sprite>
+        <sprite>sprites\Chiester_target_sys</sprite>
+        <sprite>sprites\Chiester_BB</sprite>
+      </sprites>
+      <sprites name="Beta">
+        <sprite>sprites\opponent</sprite>
+        <sprite>sprites\opponent_fun</sprite>
+        <sprite>sprites\player</sprite>
+      </sprites>
+      <sprites name="Marie Curie">
+        <sprite>sprites\marie_acid</sprite>
+        <sprite>sprites\marie_alkali</sprite>
+        <sprite>sprites\marie_radiation</sprite>
+        <sprite>sprites\marie_irradiation</sprite>
+        <sprite>sprites\marie_bb_1</sprite>
+        <sprite>sprites\marie_bb2</sprite>
+      </sprites>
+      <sprite>sprites\bill_lazer</sprite>
+      <sprite>sprites\bill_bb1</sprite>
+      <sprite>sprites\Bill_gun</sprite>
+      <sprite>sprites\bill_done</sprite>
+      <sprite>sprites\Bill_rifle</sprite>
+      <sprite>sprites\Bill_MG</sprite>
+      <sprites name="Megu">
+        <sprite>sprites\Megumin</sprite>
+        <sprite>sprites\Chomuske</sprite>
+        <sprite>sprites\Wiz</sprite>
+        <sprite>sprites\Wiz_panel</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Projectiles">
+      <sprites name="Bill">
+        <sprite>sprites\energetic_ball</sprite>
+        <sprite>sprites\blue_lazer</sprite>
+      </sprites>
+      <sprites name="Chiester">
+        <sprite>sprites\golden_arrow</sprite>
+      </sprites>
+      <sprites name="Cristal Maiden">
+        <sprite>sprites\ice_ball</sprite>
+        <sprite>sprites\ice_pick</sprite>
+        <sprite>sprites\ice_storm</sprite>
+      </sprites>
+      <sprites name="Denis">
+        <sprite>sprites\electro</sprite>
+        <sprite>sprites\zero</sprite>
+        <sprite>sprites\one</sprite>
+        <sprite>sprites\little_projectile</sprite>
+        <sprite>sprites\Star</sprite>
+        <sprite>sprites\letter_N</sprite>
+        <sprite>sprites\letter_U</sprite>
+        <sprite>sprites\letter_L</sprite>
+      </sprites>
+      <sprites name="Fineas&amp;Ferb">
+        <sprite>sprites\sputnic</sprite>
+        <sprite>sprites\water_shoot</sprite>
+        <sprite>sprites\water_bomb</sprite>
+        <sprite>sprites\tennis_ball</sprite>
+      </sprites>
+      <sprites name="Other projectiles">
+        <sprite>sprites\fIre_meteor</sprite>
+        <sprite>sprites\fireball</sprite>
+        <sprite>sprites\template_projectile</sprite>
+      </sprites>
+      <sprites name="Tanos">
+        <sprite>sprites\water_projectile</sprite>
+        <sprite>sprites\rock</sprite>
+        <sprite>sprites\tree</sprite>
+      </sprites>
+      <sprites name="Vlad">
+        <sprite>sprites\magic</sprite>
+        <sprite>sprites\ignite</sprite>
+        <sprite>sprites\ice_projectile</sprite>
+        <sprite>sprites\vlad_rock</sprite>
+        <sprite>sprites\fire_rock</sprite>
+      </sprites>
+      <sprites name="Zilean">
+        <sprite>sprites\time_magic</sprite>
+        <sprite>sprites\time_bomb</sprite>
+      </sprites>
+      <sprites name="Marie Curie">
+        <sprite>sprites\bottle</sprite>
+        <sprite>sprites\radium</sprite>
+        <sprite>sprites\acid</sprite>
+        <sprite>sprites\alkali</sprite>
+      </sprites>
+      <sprites name="Banana">
+        <sprite>sprites\banana_peel</sprite>
+        <sprite>sprites\banana_shoot</sprite>
+        <sprite>sprites\bunch_of_babanas</sprite>
+        <sprite>sprites\banana_barrier</sprite>
+        <sprite>sprites\rocket</sprite>
+      </sprites>
+      <sprite>sprites\ProjectileSprite</sprite>
+    </sprites>
+    <sprites name="Roster">
+      <sprite>sprites\MarieCSprite</sprite>
+      <sprite>sprites\ChiesterSprite</sprite>
+      <sprite>sprites\PFSprite</sprite>
+      <sprite>sprites\VladSprite</sprite>
+      <sprite>sprites\BillSprite</sprite>
+      <sprite>sprites\BananaSprite</sprite>
+      <sprite>sprites\CMSprite</sprite>
+      <sprite>sprites\ZileanSprite</sprite>
+      <sprite>sprites\ThanosSprite</sprite>
+      <sprite>sprites\CaretCharPlayer2</sprite>
+      <sprite>sprites\CaretCharPlayer1</sprite>
+      <sprite>sprites\PickCharSprite</sprite>
+      <sprite>sprites\ConfirmChoiceSprite</sprite>
+      <sprite>sprites\TextofPlayer1Sprite</sprite>
+      <sprite>sprites\TextofPlayer2Sprite</sprite>
+      <sprite>sprites\ResetChoiceSprite</sprite>
+      <sprite>sprites\RandomCharSprite</sprite>
+      <sprite>sprites\MeguminRoster</sprite>
+      <sprite>sprites\WIP_char</sprite>
+    </sprites>
+    <sprites name="BattleRoom">
+      <sprite>sprites\Caret</sprite>
+      <sprite>sprites\Panel</sprite>
+      <sprite>sprites\Tablet</sprite>
+      <sprite>sprites\VictoryScreen</sprite>
+      <sprite>sprites\debuffs</sprite>
+      <sprite>sprites\Buffs</sprite>
+      <sprite>sprites\ReadyButton</sprite>
+    </sprites>
+    <sprites name="buttons">
+      <sprite>sprites\button_exit</sprite>
+      <sprite>sprites\button_PvE</sprite>
+      <sprite>sprites\button_PvP</sprite>
+      <sprite>sprites\button_hard</sprite>
+      <sprite>sprites\button_settings</sprite>
+      <sprite>sprites\button_easy</sprite>
+      <sprite>sprites\button_EvE</sprite>
+      <sprite>sprites\button_arcade</sprite>
+      <sprite>sprites\button_qm</sprite>
+      <sprite>sprites\button_play</sprite>
+      <sprite>sprites\button_creators</sprite>
+      <sprite>sprites\button_play_click</sprite>
+      <sprite>sprites\button_creators_click</sprite>
+      <sprite>sprites\button_exit_click</sprite>
+      <sprite>sprites\button_easy_click</sprite>
+      <sprite>sprites\button_settings_click</sprite>
+      <sprite>sprites\button_hard_click</sprite>
+      <sprite>sprites\button_arcade_click</sprite>
+      <sprite>sprites\button_PvE_click</sprite>
+      <sprite>sprites\button_EvE_click</sprite>
+      <sprite>sprites\button_qm_click</sprite>
+      <sprite>sprites\button_back</sprite>
+      <sprite>sprites\button_back_click</sprite>
+      <sprite>sprites\button_music</sprite>
+      <sprite>sprites\button_music_click</sprite>
+      <sprite>sprites\button_sounds</sprite>
+      <sprite>sprites\sprite82</sprite>
+      <sprite>sprites\button_full_window</sprite>
+      <sprite>sprites\button_tutorial</sprite>
+      <sprite>sprites\button_full</sprite>
+      <sprite>sprites\button_window</sprite>
+      <sprite>sprites\button_sounds_click</sprite>
+    </sprites>
+    <sprites name="Tutorial">
+      <sprite>sprites\tablet_ch_sp</sprite>
+      <sprite>sprites\Check</sprite>
+      <sprite>sprites\TDummy</sprite>
+      <sprite>sprites\Tut_adv</sprite>
+    </sprites>
+    <sprites name="Effects">
+      <sprite>sprites\sprite_portal</sprite>
+      <sprite>sprites\Rune_sprt</sprite>
+      <sprite>sprites\ExpSpark</sprite>
+    </sprites>
+    <sprite>sprites\Explosion</sprite>
+    <sprite>sprites\Achv_bg</sprite>
+    <sprite>sprites\ach_img</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+    <background>background\background1</background>
+    <background>background\menu_back</background>
+    <background>background\back_creators</background>
+    <background>background\background4</background>
+    <background>background\background5</background>
+    <background>background\background6</background>
+    <background>background\background7</background>
+    <background>background\background8</background>
+    <background>background\background9</background>
+  </backgrounds>
   <paths name="paths"/>
-  <shaders name="shaders"/>
   <objects name="objects">
-    <object>objects\Trey</object>
-    <object>objects\Trey_player2</object>
-    <object>objects\panelObj</object>
-    <object>objects\tabletObj</object>
-    <object>objects\caretObj</object>
-    <object>objects\StartButton</object>
-    <object>objects\PvPButton</object>
-    <object>objects\PvEButton</object>
-    <object>objects\SettingsButton</object>
-    <object>objects\ExitButton</object>
-    <object>objects\BackToMMenuButton</object>
-    <object>objects\Projectile</object>
-    <object>objects\Player_1</object>
-    <object>objects\Player_2</object>
+    <objects name="Menu">
+      <object>objects\StartButton</object>
+      <object>objects\PvPButton</object>
+      <object>objects\PvEButton</object>
+      <object>objects\SettingsButton</object>
+      <object>objects\ExitButton</object>
+    </objects>
+    <objects name="Roster">
+      <object>objects\ResetChoiceButton</object>
+      <object>objects\Chars</object>
+      <object>objects\ConfirmChoiceButton</object>
+      <object>objects\ClickChar</object>
+      <object>objects\RandomChar</object>
+      <object>objects\PickChar</object>
+      <object>objects\CharObj</object>
+      <object>objects\TextofPlayer</object>
+    </objects>
+    <objects name="BattleRoom">
+      <object>objects\Trey</object>
+      <object>objects\Rune</object>
+      <object>objects\Trey_player2</object>
+      <object>objects\panelObj</object>
+      <object>objects\tabletObj</object>
+      <object>objects\caretObj</object>
+      <object>objects\Projectile</object>
+      <object>objects\miragecoordinator</object>
+      <object>objects\Player_1</object>
+      <object>objects\Start</object>
+      <object>objects\PlayerHealth</object>
+      <object>objects\BB_panel</object>
+      <object>objects\lazer</object>
+      <object>objects\ExplosionObj</object>
+      <object>objects\ExpSparkObj</object>
+    </objects>
+    <objects name="menu_buttons">
+      <object>objects\btn_exit</object>
+      <object>objects\btn_settings</object>
+      <object>objects\btn_arcade</object>
+      <object>objects\btn_fullandwindow</object>
+      <object>objects\btn_play</object>
+      <object>objects\btn_qm</object>
+      <object>objects\btn_creators</object>
+      <object>objects\btn_PvE</object>
+      <object>objects\btn_EvE</object>
+      <object>objects\btn_easy_EvE</object>
+      <object>objects\btn_easy_PvE</object>
+      <object>objects\btn_easy_acrade</object>
+      <object>objects\btn_hard_EvE</object>
+      <object>objects\btn_hard_PvE</object>
+      <object>objects\btn_hard_arcade</object>
+      <object>objects\btn_music</object>
+      <object>objects\btn_PvP</object>
+      <object>objects\btn_back</object>
+      <object>objects\btn_sounds</object>
+      <object>objects\btn_full_window</object>
+      <object>objects\btn_tutorial</object>
+    </objects>
+    <objects name="WorldWide">
+      <object>objects\HAL</object>
+    </objects>
+    <objects name="Tutorial">
+      <object>objects\Tutorial_trey</object>
+      <object>objects\Tut_panel</object>
+      <object>objects\Tut_tablet</object>
+      <object>objects\Tut_caret</object>
+      <object>objects\Tut_player</object>
+      <object>objects\TargetDummy</object>
+      <object>objects\Checker</object>
+      <object>objects\Tut_projectile</object>
+      <object>objects\Dummy_Proj</object>
+      <object>objects\Tut_SP1</object>
+      <object>objects\Tut_SP2</object>
+      <object>objects\Tut_U1</object>
+      <object>objects\Tut_U2</object>
+      <object>objects\Tut_advice</object>
+    </objects>
+    <object>objects\Achievmenet</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\MainMenu</room>
-    <room>rooms\Settings</room>
+    <room>rooms\menu</room>
+    <room>rooms\Tutorial</room>
     <room>rooms\Roster</room>
+    <room>rooms\settings</room>
+    <room>rooms\creators</room>
     <room>rooms\FightRoom</room>
   </rooms>
   <help>

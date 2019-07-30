@@ -25,44 +25,531 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>i=0
+            <string>char_index=9
+sh_t_m=11
+f_launch=false
+sec_exp=false
+AId=false
+cur=0
 c=4
+action_tablets[c*6]=0
+action_panels[6]=0
+last_used=-1
+player_num=1
+modif=0
+team=1
+
+i=0
 while (i&lt;6)
 {
-tmp=instance_create(1366-self.x,self.y+100*i,panelObj);
-tmp.image_xscale=-tmp.image_xscale
-f=0
-while (f&lt;c)
-{
-tmp2=instance_create(tmp.x+600*tmp.image_xscale+70+210/c*(f mod c),tmp.y+(80-200/c)/2,tabletObj)
-tmp2.image_xscale=2/c
-tmp2.image_yscale=2/c
-tmp2.team=2
-f++
-}
+action_panels[i]=instance_create(1366-self.x,self.y+100*i,panelObj);
+action_panels[i].snum=i;
+action_panels[i].image_xscale=-action_panels[i].image_xscale
+action_panels[i].tr=self;
+action_panels[i].team=1
 i++
 };
+i=0
+miragecoordinator.p2x=action_panels[0].x-235
+while (i&lt;6*c)
+{
+tmp=instance_create(action_panels[0].x-235+230/c*(i mod c),action_panels[0].y+(84-200/c)/2+100*(i div c),tabletObj)
+tmp.image_xscale=2/c
+tmp.image_yscale=2/c
+tmp.team=1
+tmp.snum=i
+tmp.tr=self
+action_tablets[i]=tmp
+i++
+}
+car=instance_create(action_tablets[0].x,action_tablets[0].y-ceil(74/c),caretObj)
+car.image_xscale=2/c
+car.image_yscale=2/c
+car.team=1
+car.tr=self
+plr=instance_create(1366-(self.x+350),self.y+200,Player_1)
+plr.team=-1
+plr.tr=self
+switch (char_index)
+{
+    case 6:
+    plr.sprite_index=Bill_gun
+    break
+    case 9:
+    plr.sprite_index=Chiester_normal
+    break
+    default: plr.sprite_index=Marie
+}
+plr.image_speed=0
+plr.image_xscale=-plr.image_xscale
+active=0
 </string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
-        <id>531</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_fullscreen</functionname>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>4</kind>
-            <string>2</string>
+            <kind>1</kind>
+            <string>if (f_launch)
+{      
+    switch (char_index)
+    {
+        case 1:
+        plr.sprite_index=Megumin
+        break
+        case 6:
+        plr.sprite_index=Bill_gun
+        break
+        case 9:
+        plr.sprite_index=Chiester_normal
+        break
+        default: plr.sprite_index=Marie
+    }
+    f_launch=false
+}
+i=0
+ama=0
+while (i&lt;c*6)
+{
+     if ((miragecoordinator.game_state==1)and(AId))
+        {
+            action_tablets[i].AId=true
+            if (AId==1)or(sh_t_m&gt;6)
+            {
+                action_tablets[i].status=floor(random(11)) 
+            }
+            else
+            {
+                action_tablets[i].status=floor(random(3))+8
+            }
+            if (char_index==1)
+            {
+                action_tablets[20].status=4
+                action_tablets[21].status=8
+                action_tablets[22].status=9
+                action_tablets[23].status=10
+            }
+            sh_t_m=action_tablets[i].status
+        }
+    tmp=action_tablets[i].status
+    if (tmp&gt;6)
+    {
+        ama++
+    }
+    i++
+}
+if (((miragecoordinator.game_state==1)or(miragecoordinator.game_state==3))and(AId))
+    {
+        miragecoordinator.game_state++
+    }
+
+if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(plr.block_delay&lt;=0)and(action_panels[cur div 4].bb_stat==0))
+{
+    act=action_tablets[cur]
+    if (plr.debuff[3]&gt;0)
+    {
+        act.status=floor(random(11))        
+    }
+    if (plr.debuff[4]&gt;0)
+    {
+        act.status=0    
+        plr.debuff[4]-=0.5     
+    }
+    active=cur
+    if ((act.status&gt;0)and(act.status&lt;7))
+    {
+        modif=act.status
+    }
+    if (act.status==7)
+    {
+        //set player sprite to blocking
+        plr.block_delay=1.1
+    }
+    if (act.status&gt;7)
+    {
+        if (modif&lt;5)
+        {
+        switch(char_index)
+        {
+            case 1:
+                ef=instance_create(plr.x-125,plr.y+20,ExpSparkObj)
+                ef.image_speed=0.8
+            break
+            case 6:
+                switch (act.status)
+                {
+                    case 8:
+                    plr.sprite_index=Bill_gun
+                    break
+                    case 9:
+                    plr.sprite_index=Bill_rifle
+                    break
+                    default:
+                    plr.sprite_index=Bill_MG 
+                    break
+                }
+                plr.image_speed=0.125
+                break
+            case 9:
+                plr.sprite_index=Chiester_normal
+                plr.image_speed=0.3
+            break
+            default:
+                switch (act.status)
+                {
+                    case 8:
+                    plr.sprite_index=Marie
+                    break
+                    case 9:
+                    plr.sprite_index=marie_alkali
+                    break
+                    default:
+                    plr.sprite_index=marie_acid
+                    break
+                }
+                plr.image_speed=0.125
+            break
+            
+        }
+        i=1
+        switch(char_index)
+        {
+        case 1:
+            plr.atcstun+=(act.status-7)*1/4
+            plr.ExpDmg+=(act.status-7)*10
+            ef.image_xscale*=(act.status-7)
+            ef.image_yscale*=(act.status-7)
+        break
+        case 6:
+            {
+              i=power(2,act.status-8)
+            }
+        default:
+            {
+            while (i&gt;0)
+            {
+            tmp=instance_create(plr.x-40*(i+1),plr.y+40,Projectile)
+            tmp.own_plr=plr
+            tmp.set_player=-1
+            if (modif==1)
+            {
+                tmp.y+=25
+            }
+            if (modif==2)
+            {
+                tmp.y-=25
+            }
+            if (modif==3)
+            {
+                tmp.p_speed*=0.8
+                plr.atcstun-=0.2
+                tmp.hitstun*=0.8
+            }  
+            if (modif==4)
+            {
+                tmp.p_speed*=1.25
+                plr.atcstun+=0.2
+                tmp.hitstun*=1.25
+            }
+            plr.atcstun+=(act.status-7)*1/4
+            tmp.damage*=(act.status-7)*1/2-ceil(plr.debuff[0])*1/3
+               switch(char_index)
+                 {
+                case 6:
+                    tmp.sprite_index=energetic_ball
+                    tmp.image_xscale=-0.5
+                    tmp.image_yscale=0.5
+                    tmp.damage=3        
+                    plr.atcstun=(act.status-7)*1/4
+                break
+                    case 9:
+                        tmp.sprite_index=golden_arrow
+                        tmp.image_xscale=-2
+                        tmp.image_yscale=0.5
+                    break
+                    default:
+                        switch (act.status)
+                        {
+                            case 8:
+                            tmp.sprite_index=bottle
+                            break
+                            case 9:
+                            tmp.sprite_index=alkali
+                            break
+                            default:
+                            tmp.sprite_index=acid
+                            break
+                        }
+                        tmp.grav=true
+                    break
+                    
+                }
+                i--
+                }
+            modif=0
+            }
+        }
+        }
+        else
+        {
+            if (modif==5)
+            {
+                switch (char_index)
+                {
+                case 1:
+                    plr.buff[0]=0.5
+                break
+                case 6:
+                    plr.sprite_index=bill_lazer
+                    plr.image_speed=0.1
+                    tmp=instance_create(plr.x-150,plr.y+40,lazer)
+                    tmp.delay=1.5
+                    tmp.own_plr=plr
+                    tmp.set_player=-1
+                break
+                case 9:
+                    plr.sprite_index=Chiester410n45
+                    plr.image_speed=0.3
+                    tmp=instance_create(1366+250,10,BB_panel)
+                    tmp.sprite_index=Chiester_BB
+                    tmp.image_index=0
+                    tmp.image_speed=0
+                    tmp.image_xscale=-tmp.image_xscale
+                    tmp=instance_create(plr.x-167,plr.y+40,Projectile)
+                    tmp.own_plr=plr 
+                    tmp.set_player=-1
+                    tmp.damage*=(act.status-7)*1/2-ceil(plr.debuff[0])*1/3
+                    tmp.dvd=true
+                    tmp.sprite_index=golden_arrow
+                    tmp.image_xscale=2
+                    tmp.image_yscale=0.5 
+                break                    
+                default:
+                    plr.sprite_index=marie_irradiation
+                    plr.image_speed=0.1
+                    Trey_player2.plr.debuff[0]=1
+                    //enemy rad sprite
+                break
+                }
+                plr.atcstun+=1/2
+                modif=0
+            }
+            
+            if (modif==6)
+            {
+                switch (char_index)
+                {      
+                    case 1:
+                        Trey.plr.debuff[5]=2+3*plr.wizAv
+                        tmp=instance_create(1366+250,10,BB_panel)
+                        tmp.sprite_index=Chomuske
+                        tmp.image_index=0
+                        tmp.image_speed=0
+                        tmp.image_xscale=-tmp.image_xscale
+                    break
+                    case 6:
+                        tmp=instance_create(plr.x-200,plr.y,Rune)
+                        tmp.image_xscale=plr.image_xscale
+                        tmp.image_yscale=plr.image_yscale   
+                    break
+                    case 9:         
+                        tmp=instance_create(plr.x-167,plr.y+40,Projectile)
+                        tmp.own_plr=plr
+                        tmp.sprite_index=golden_arrow
+                        tmp.set_player=-1
+                        tmp.image_xscale=2
+                        tmp.image_yscale=0.5
+                        tmp.homing=true
+                        plr.sprite_index=Chiester_normal
+                        plr.image_speed=0.3
+                        tmp=instance_create(1366+250,10,BB_panel)
+                        tmp.sprite_index=Chiester_BB
+                        tmp.image_index=1
+                        tmp.image_speed=0
+                        tmp.image_xscale=-tmp.image_xscale
+                        break
+                    default:
+                        plr.sprite_index=marie_radiation
+                        plr.image_speed=0.1
+                        plr.debuff[1]=1
+                        plr.buff[floor(random(4))]=1
+                        //enemy rad sprite
+                        break
+                }
+                plr.atcstun+=1/2
+                modif=0
+            }
+        }        
+    }
+    cur++
+}
+if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(action_panels[cur div 4].bb_stat==1))
+{
+    switch (char_index)
+    {
+        case 1:
+            plr.wizAv=1
+        break
+        case 6:
+            plr.sprite_index=bill_bb1
+            plr.image_speed=0.2
+            plr.buff[0]=0.5
+        break
+        case 9:
+            tmp=instance_create(plr.x-167,plr.y+40,Projectile)
+            tmp.own_plr=plr
+            tmp.sprite_index=golden_arrow
+            tmp.image_xscale=2
+            tmp.image_yscale=0.5
+            tmp.debuff[4]=1
+            tmp.set_player=-1
+            plr.sprite_index=Chiester410n45
+            plr.Ch_s_a=true
+            plr.image_speed=0.3
+            tmp=instance_create(1366+250,10,BB_panel)
+            tmp.sprite_index=Chiester_BB
+            tmp.image_index=2
+            tmp.image_speed=0
+            tmp.image_xscale=-tmp.image_xscale
+            break
+        default:
+            plr.sprite_index=marie_bb_1
+            plr.image_speed=0.2
+            Trey_player2.plr.debuff[2]=999
+            break
+    }
+    plr.atcstun+=3/4
+    cur+=4
+}
+if ((miragecoordinator.game_state==4)and(cur&lt;24)and(plr.hitstun&lt;=0)and(plr.atcstun&lt;=0)and(action_panels[cur div 4].bb_stat==2))
+{
+    switch (char_index)
+    {
+        case 1:
+            plr.expl=1
+            plr.debuff[4]=999
+            plr.explo=instance_create(100,plr.y-40,ExplosionObj)
+            plr.explo.image_speed=16/150
+            plr.explo.damage=plr.ExpDmg/150.0
+            sec_exp=true
+            if (plr.buff[0]&gt;0)
+            {
+                plr.explo.dis_speed=1.5
+                plr.explo.image_speed*=1.5
+                plr.explo.damage*=1.5
+            }
+        break
+        case 6:
+            plr.sprite_index=bill_done
+            plr.image_speed=0.05
+            miragecoordinator.time_stop++
+        break
+        case 9:
+            plr.sprite_index=Chiester410n45
+            plr.Ch_s_a=true
+            plr.image_speed=0.3
+            plr.buff[4]=5
+            tmp=instance_create(1366+250,10,BB_panel)
+            tmp.sprite_index=Chiester_BB
+            tmp.image_index=1
+            tmp.image_speed=0
+            tmp.image_xscale=-tmp.image_xscale
+            break
+        default:
+            plr.sprite_index=marie_bb2
+            plr.image_speed=0.2
+            r=0
+            while (r&lt;3)
+            {
+                if (random(1)&gt;=0.5)
+                {
+                    plr.buff[floor(random(4))]=2
+                }
+                else
+                {
+                    plr.debuff[floor(random(5))]=2
+                }
+                r++
+            }
+            break
+    }
+    plr.atcstun+=3/4
+    cur+=4
+}
+
+if (sec_exp)
+{ 
+    if (plr.wizAv&gt;0)and((plr.wizAv-1/150)&lt;=0)
+                {
+                    plr.expl=1
+                    plr.debuff[4]=999
+                    plr.explo=instance_create(100,plr.y-40,ExplosionObj)
+                    plr.explo.image_speed=16/150
+                    plr.explo.damage=plr.ExpDmg/150.0
+                    plr.wizAv=0
+                    tmp=instance_create(1366+250,110,BB_panel)
+                    tmp.sprite_index=Wiz_panel
+                    tmp.image_index=0
+                    tmp.image_speed=0.5
+                    tmp.image_xscale=-tmp.image_xscale
+                }
+                else if (plr.wizAv&gt;0)
+                {
+                    plr.wizAv-=1/150
+                }
+                else miragecoordinator.plr2_fin=true
+}
+if (cur&gt;23)
+{
+    if (team==0)
+    {
+        miragecoordinator.plr1_fin=true
+    }
+    else
+    {
+        miragecoordinator.plr2_fin=true
+    }
+    cur=24
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="48">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>plr.hp=1
+</string>
           </argument>
         </arguments>
       </action>
