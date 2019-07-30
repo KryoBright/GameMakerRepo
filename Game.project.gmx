@@ -27,6 +27,7 @@
         <sprite>sprites\marie_radiation</sprite>
         <sprite>sprites\marie_irradiation</sprite>
         <sprite>sprites\marie_bb_1</sprite>
+        <sprite>sprites\marie_bb2</sprite>
       </sprites>
       <sprite>sprites\bill_lazer</sprite>
       <sprite>sprites\bill_bb1</sprite>
@@ -34,6 +35,12 @@
       <sprite>sprites\bill_done</sprite>
       <sprite>sprites\Bill_rifle</sprite>
       <sprite>sprites\Bill_MG</sprite>
+      <sprites name="Megu">
+        <sprite>sprites\Megumin</sprite>
+        <sprite>sprites\Chomuske</sprite>
+        <sprite>sprites\Wiz</sprite>
+        <sprite>sprites\Wiz_panel</sprite>
+      </sprites>
     </sprites>
     <sprites name="Projectiles">
       <sprites name="Bill">
@@ -100,7 +107,6 @@
       </sprites>
       <sprite>sprites\ProjectileSprite</sprite>
     </sprites>
-    <sprite>sprites\sprite_portal</sprite>
     <sprites name="Roster">
       <sprite>sprites\MarieCSprite</sprite>
       <sprite>sprites\ChiesterSprite</sprite>
@@ -119,12 +125,12 @@
       <sprite>sprites\TextofPlayer2Sprite</sprite>
       <sprite>sprites\ResetChoiceSprite</sprite>
       <sprite>sprites\RandomCharSprite</sprite>
-      <sprite>sprites\DZSprite</sprite>
+      <sprite>sprites\MeguminRoster</sprite>
+      <sprite>sprites\WIP_char</sprite>
     </sprites>
     <sprites name="BattleRoom">
       <sprite>sprites\Caret</sprite>
       <sprite>sprites\Panel</sprite>
-      <sprite>sprites\Rune_sprt</sprite>
       <sprite>sprites\Tablet</sprite>
       <sprite>sprites\VictoryScreen</sprite>
       <sprite>sprites\debuffs</sprite>
@@ -169,13 +175,28 @@
       <sprite>sprites\tablet_ch_sp</sprite>
       <sprite>sprites\Check</sprite>
       <sprite>sprites\TDummy</sprite>
+      <sprite>sprites\Tut_adv</sprite>
     </sprites>
+    <sprites name="Effects">
+      <sprite>sprites\sprite_portal</sprite>
+      <sprite>sprites\Rune_sprt</sprite>
+      <sprite>sprites\ExpSpark</sprite>
+    </sprites>
+    <sprite>sprites\Explosion</sprite>
+    <sprite>sprites\Achv_bg</sprite>
+    <sprite>sprites\ach_img</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\background1</background>
     <background>background\menu_back</background>
     <background>background\back_creators</background>
+    <background>background\background4</background>
+    <background>background\background5</background>
+    <background>background\background6</background>
+    <background>background\background7</background>
+    <background>background\background8</background>
+    <background>background\background9</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
@@ -210,6 +231,8 @@
       <object>objects\PlayerHealth</object>
       <object>objects\BB_panel</object>
       <object>objects\lazer</object>
+      <object>objects\ExplosionObj</object>
+      <object>objects\ExpSparkObj</object>
     </objects>
     <objects name="menu_buttons">
       <object>objects\btn_exit</object>
@@ -251,7 +274,9 @@
       <object>objects\Tut_SP2</object>
       <object>objects\Tut_U1</object>
       <object>objects\Tut_U2</object>
+      <object>objects\Tut_advice</object>
     </objects>
+    <object>objects\Achievmenet</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\menu</room>

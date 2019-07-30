@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>damage = 10
-lifetime=3
+lifetime=4
 p_speed=8
 hitstun=0.3
 set_collision=true
@@ -106,7 +106,11 @@ if((ult_fineas_and_ferb)and(miragecoordinator.time_stop&lt;=0))
 if((tanos_projectile)and(miragecoordinator.time_stop&lt;=0))
 self.y-=p_speed
 if((just_projectile)and(miragecoordinator.time_stop&lt;=0))
-self.x+=p_speed*set_player
+{
+    self.x+=p_speed*cos(alpha)*set_player
+    self.y+=p_speed*sin(alpha)*set_player
+    image_angle=alpha
+}
 if ((dvd)and(miragecoordinator.time_stop&lt;=0))
 {
     if (dvdt&lt;0)
@@ -146,6 +150,11 @@ if ((homing)and(miragecoordinator.time_stop&lt;=0))
     y=y+2*cos(dtime)
     x=x+2*sin(dtime)
     dtime+=1/10
+    if (image_angle&lt;abs(-dtime*60))
+    {
+        image_angle+=1
+    }
+    else image_angle-=1
 }
 if (miragecoordinator.time_stop&lt;=0)
 lifetime-=1/30

@@ -25,7 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>anim=0
+            <string>explo=0
+anim=0
+wizAv=0
+ExpDmg=50
+expl=0
 tr=-1
 hp=100
 prev_hp=100
@@ -87,7 +91,13 @@ if ((miragecoordinator.game_state==4)and(!onPlace))
     hitstun=0.3
 }
 if (atcstun&gt;0)
+    {
+    if (debuff[5]&gt;0)
+    {
+        atcstun+=1/180 
+    }
     atcstun-=1/60  
+    }
 if (hitstun&gt;0)
     hitstun-=1/60
 if (block_delay&gt;0)
@@ -105,12 +115,19 @@ if (debuff[2]&gt;0)
 {
     if (hp&gt;1)
     {
-        hp-=0.03
+        hp-=0.1
     }
 }
 if (buff[0]&gt;0)
 {
-    atcstun-=1/30  
+    atcstun-=1/30
+}
+if (buff[3])
+{
+    if (hp&lt;100)
+    {
+        hp+=0.05
+    }
 }
 if (buff[1]&gt;0)
 {
@@ -170,7 +187,7 @@ if (Ch_s_a)
     }
 }
 
-if (buff[3])
+if (buff[4])
 {
     tmp1=collision_line(x+700*team,y-200,x+600*team,y+200,Projectile,true,true)
     if (tmp1!=noone)
@@ -190,7 +207,7 @@ if (buff[3])
                 tmp.image_xscale=2*team
                 tmp.image_yscale=0.5
             }
-            hp++
+            buff[3]++
             tmp1.chased=true
         }
     }
@@ -221,6 +238,10 @@ if (buff[3])
 if (Ch_s_a)
 {
 draw_sprite(Chiester_target_sys,floor(atcstun*32),x+50*team-50,y)
+}
+if (wizAv)
+{
+    draw_sprite(Wiz,0,x+10-101*(1+team)/2,y)
 }
 </string>
           </argument>

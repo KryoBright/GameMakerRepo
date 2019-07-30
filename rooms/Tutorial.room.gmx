@@ -52,8 +52,9 @@
   </views>
   <instances>
     <instance objName="Tutorial_trey" x="32" y="128" name="inst_C0CC6738" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="TargetDummy" x="960" y="320" name="inst_681B651A" locked="0" code="" scaleX="0.100628927350044" scaleY="0.0641282573342323" colour="4294967295" rotation="0"/>
+    <instance objName="TargetDummy" x="832" y="320" name="inst_681B651A" locked="0" code="" scaleX="0.100628927350044" scaleY="0.0641282573342323" colour="4294967295" rotation="0"/>
     <instance objName="Checker" x="640" y="608" name="inst_304ADEC5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Tut_advice" x="896" y="64" name="inst_4364B911" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

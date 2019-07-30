@@ -38,6 +38,7 @@ while (i&lt;10)
     debuff[i]=0
     i++
 }
+buff[3]=9999
 team=-1
 tmp=instance_create(32,32,PlayerHealth)
 tmp.plr=self
@@ -63,9 +64,12 @@ tmp.plr=self
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (hp&lt;100)
+            <string>if (buff[3])
 {
-    hp+=0.1
+    if (hp&lt;100)
+    {
+        hp+=0.07
+    }
 }
 </string>
           </argument>

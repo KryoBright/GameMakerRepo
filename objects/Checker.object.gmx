@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (Tutorial_trey.tut_state&gt;2)
+            <string>if (Tutorial_trey.tut_state&gt;17)
 {
     image_index=1
 }
@@ -80,7 +80,7 @@ if (Tutorial_trey.tut_state==floor(Tutorial_trey.tut_state))
             <kind>1</kind>
             <string>if (Tutorial_trey.working)
 {
-    if (Tutorial_trey.tut_state&lt;3)
+    if ((Tutorial_trey.tut_state&lt;3)or(Tutorial_trey.tut_state==6)or(Tutorial_trey.tut_state==12)or(Tutorial_trey.tut_state==15))
     {
         Tutorial_trey.tut_state++
     }
@@ -93,7 +93,7 @@ if (Tutorial_trey.tut_state==floor(Tutorial_trey.tut_state))
         }
     }
 }
-if (Tutorial_trey.tut_state==15)
+if (Tutorial_trey.tut_state==18)
 {
     room_goto(menu)
 }

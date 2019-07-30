@@ -115,21 +115,21 @@ if (tut_state!=tut_prev)
         tmp.image_xscale*=1.5
         tmp.image_yscale*=1.5
     }
-    if (tut_state==6.5)
+    if (tut_state==7.5)
     {
         tmp=instance_create(plr.x+20,plr.y+80,Tut_projectile)
         tmp.p_damage*=0.5
         tmp.image_xscale*=0.8
         tmp.image_yscale*=0.8
     }
-    if (tut_state==7.5)
+    if (tut_state==8.5)
     {
         tmp=instance_create(plr.x+20,plr.y,Tut_projectile)
         tmp.p_damage*=0.5
         tmp.image_xscale*=0.8
         tmp.image_yscale*=0.8
     }
-    if (tut_state==8.5)
+    if (tut_state==9.5)
     {
         tmp=instance_create(plr.x+20,plr.y+40,Tut_projectile)
         tmp.p_damage*=0.5
@@ -138,7 +138,7 @@ if (tut_state!=tut_prev)
         tmp.p_speed*=0.6
         tmp.p_damage*=0.8
     }
-    if (tut_state==9.5)
+    if (tut_state==10.5)
     {
         tmp=instance_create(plr.x+20,plr.y+40,Tut_projectile)
         tmp.p_damage*=0.5
@@ -147,23 +147,23 @@ if (tut_state!=tut_prev)
         tmp.p_speed*=1.4
         tmp.p_damage*=1.25
     }
-    if (tut_state==10.5)
-    {
-        tmp=instance_create(plr.x+620,plr.y+40,Dummy_Proj)
-    }
     if (tut_state==11.5)
     {
-        tmp=instance_create(plr.x+20,plr.y+40,Tut_SP1)
-    }
-    if (tut_state==12.5)
-    {
-        tmp=instance_create(plr.x+20,plr.y+40,Tut_SP2)
+        tmp=instance_create(plr.x+420,plr.y+40,Dummy_Proj)
     }
     if (tut_state==13.5)
     {
-        tmp=instance_create(plr.x+20,plr.y+40,Tut_U1)
+        tmp=instance_create(plr.x+20,plr.y+40,Tut_SP1)
     }
     if (tut_state==14.5)
+    {
+        tmp=instance_create(plr.x+20,plr.y+40,Tut_SP2)
+    }
+    if (tut_state==16.5)
+    {
+        tmp=instance_create(plr.x+20,plr.y+40,Tut_U1)
+    }
+    if (tut_state==17.5)
     {
         tmp=instance_create(plr.x+20,plr.y+40,Tut_U2)
     }

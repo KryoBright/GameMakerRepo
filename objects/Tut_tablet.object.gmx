@@ -56,6 +56,18 @@ correct=1
             <string>if (status&lt;0) status=10
 else if (status&gt;10) status=0
 real_st=floor(Tutorial_trey.tut_state-2)
+if (real_st&gt;=4)
+{
+    real_st--
+}
+if (real_st&gt;=9)
+{
+    real_st--
+}
+if (real_st&gt;=11)
+{
+    real_st--
+}
 if (real_st&lt;0)
 {
     real_st=0

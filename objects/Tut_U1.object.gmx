@@ -52,7 +52,7 @@ alpha=0
             <string> delay-=1
                 if(delay&lt;=0)
                 {
-                   delay=10
+                   delay=3
                    alpha=random(2.6)-1.3       
                 }
 self.x+=8*cos(alpha)

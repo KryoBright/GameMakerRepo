@@ -35,6 +35,8 @@ need_room=-1
 can_go=false
 fullscreen=true
 prep=false
+Achievmenet.got_ach=0
+
 </string>
           </argument>
         </arguments>
@@ -87,6 +89,53 @@ if ((can_go)and(need_room!=-1))
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (room==Tutorial)
+{
+    Achievmenet.got_ach=1
+}
+if (room==FightRoom)
+{
+    if ((arc_rem==0)and(arcade))
+    {
+        switch plr1_chr
+        {
+           case 1:
+           Achievmenet.got_ach=2
+           break;
+           case 6:
+           Achievmenet.got_ach=4
+           break;
+           case 9:
+           Achievmenet.got_ach=3
+           break;
+           default:
+           Achievmenet.got_ach=5
+           break
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>
@@ -104,7 +153,7 @@ if ((can_go)and(need_room!=-1))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if ((room!=FightRoom)and(room!=creators))
+            <string>if ((room!=FightRoom)and(room!=creators)and(room!=Tutorial))
 {
     background_index[0]=menu_back
     background_visible[0]=true
